@@ -1,0 +1,905 @@
+.po-info
+	padding: 40px 0 0px
+
+
+// .po-info-container
+	// +box-shadow(0px 4px 35px -3px rgba(0, 0, 0, 0.15))
+	// background: #fff
+
+
+.po-info-top
+	+pie-clearfix
+	+box-sizing(border-box)
+	background: #fcfcfc
+	padding: 25px
+.po-info-top-l
+	float: left
+	padding: 0px 30px
+	width: 680/1180*100%
+	+box-sizing(border-box)
+	+breakpoint(1023px)
+		float: none
+		display: block
+		width: 100%
+	+breakpoint(767px)
+		padding: 0
+	.ava
+		width: 170px
+		height: 170px
+		padding: 10px
+		background: #fff
+		+box-sizing(border-box)
+		display: inline-block
+		vertical-align: top
+		+breakpoint(1023px)
+			vertical-align: middle
+		+breakpoint(767px)
+			display: block
+			margin: auto
+		img 
+			height: 100%
+			width: 100%
+			object-fit: cover
+	.ava-text
+		display: inline-block
+		vertical-align: top
+		margin-top: 30px
+		margin-left: 65/705*100%
+		+breakpoint(1023px)
+			vertical-align: middle
+			
+		+breakpoint(767px)
+			display: block
+			margin-left: 0
+			text-align: center
+		a 
+			font-size: 15px
+			line-height: 1
+			position: relative
+			margin-left: 30px
+			&:after
+				font-size: 13px
+				// display: inline-block
+				// vertical-align: middle
+				// margin-right: 10px
+				position: absolute
+				left: -23px
+				top: 0
+		.po-info-top-r
+			display: none
+			+breakpoint(1023px)
+				display: block
+				background: transparent
+				float: none
+				width: 100%
+				padding: 30px 0
+		.name
+			font-size: 30px
+			line-height: 1
+			margin-bottom: 15px
+			color: #30242b
+
+		.edit
+			margin-right: 17px
+			color: #b4337f
+			&:after
+				+font-icon("draw")
+		.logout
+			color: #883e6a
+			+breakpoint(767px)
+				margin-right: 17px
+			&:after
+				+font-icon("exit")
+.po-info-top-r
+	float: right
+	// padding: 0 25px
+	width: 400/1180*100%
+	background: #fdf9ee
+	padding: 30px
+	color: #6f6c63
+	+box-sizing(border-box)
+	+breakpoint(1023px)
+		display: none
+	// 	float: none
+	// 	display: block
+	// 	width: 100%
+	p 
+		font-size: 18px
+		line-height: 1
+		color: #30242b
+		display: block
+		
+		&:before
+			display: inline-block
+			vertical-align: middle
+			margin-right: 12px
+			color: #c1bdb1
+	span
+		font-size: 14px
+		line-height: 1
+		margin-top: 8px
+		display: block
+		
+	.phone
+		font-size: 16px
+		line-height: 1
+		margin-top: 25px
+		&:before
+			+font-icon("telephone")
+	.email
+		font-size: 16px
+		line-height: 1
+		margin-top: 25px
+		&:before
+			+font-icon("mail")
+.po-info-bottom
+	+pie-clearfix
+	+box-sizing(border-box)
+	h4 
+		color: #30242b
+		font-size: 18px
+		line-height: 1.2
+		margin-bottom: 35px	
+		text-transform: uppercase
+		span 
+			font-size: 16px
+			color: #bebbbd
+		+breakpoint(767px)
+			margin-bottom: 20px
+.po-info-bottom-l
+	float: left 
+	width: 290/1180*100%
+	// border-top: 1px solid #f1f1f1
+	// border-right: 1px solid #f1f1f1
+	// margin-right: -1px
+	+box-sizing(border-box)
+	+breakpoint(767px)
+		display: none
+		
+	li 
+		font-size: 15px
+		line-height: 1
+		color: #53484e
+		margin-bottom: 30px
+		display: block
+		cursor: pointer
+		&:hover
+			color: #b4337f
+		&.active
+			color: #b4337f
+	.po-info-bottom-l-item
+		+box-sizing(border-box)
+		padding: 35px 30px 40px 55px
+		border-top: 1px solid #f1f1f1
+		+breakpoint(1023px)
+			padding: 15%
+		+breakpoint(767px)
+
+		&:nth-child(2)
+			background: #fdfdfd
+			border-bottom: 1px solid #f1f1f1
+		// h4 
+			// margin-bottom: 50px
+.po-info-bottom-r
+	float: right
+	width: 890/1180*100%
+	border-top: 1px solid #f1f1f1
+	border-left: 1px solid #f1f1f1
+	+box-sizing(border-box)
+	position: relative
+	padding-bottom: 25px
+	min-height: 725px
+	+breakpoint(767px)
+		width: 100%
+		float: none
+		display: block
+	&>div
+		+opacity(0)
+		z-index: -2
+		max-height: 0
+		+transition(0.3s)
+		overflow: hidden
+		&.open
+			+opacity(1)
+			z-index: 1
+			max-height: 5000px
+	h4
+		&:before
+			+font-icon("arrow")
+			font-size: 8px
+			color: #979595
+			display: inline-block
+			vertical-align: middle
+			margin-right: 15px
+			margin-bottom: 3px
+	// .newinp
+	// 	display: inline-block
+	// 	vertical-align: top
+	// 	width: 380/820*100%
+	// 	margin-right: 7.17561%
+	// 	// &:first-child
+	// 		// width: 100%
+
+	// 	&:nth-child(even)
+	// 		margin-right: 0
+	// 	+breakpoint(767px)
+	// 		margin-right: 0
+	// 		display: block
+	// 		width: 100%
+	// 	&>input
+	// 		border-color: #f1f1f1
+	// 		color: #30242b
+	// 		margin-bottom: 30px
+	// 		&:focus
+	// 			border-color: #e0e0e0
+	// 		&:focus ~ span,
+	// 		&.notempty ~ span
+	// 			color: #8f8f8f
+	// 	&>span
+	// 		color: #b7b7b7
+	.newinp
+		display: inline-block
+		vertical-align: top
+		width: 380/820*100%
+		margin-right: 7.17561%
+		// margin-bottom: 47px
+		margin-bottom: 35px
+		margin-top: 21px
+		// &:nth-last-of-type(1)
+			// margin-bottom: 25px
+			// &>input
+		// &:first-child
+			// width: 100%
+		&:nth-child(even)
+			margin-right: 0
+		+breakpoint(767px)
+			margin-right: 0
+			display: block
+			width: 100%
+		&>input
+			border-color: #f1f1f1
+			color: #30242b
+			font-size: 14px
+			// margin-bottom: 40px
+			border: 1px solid #f2f0f1 !important
+			+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.02))
+			padding-left: 20px !important
+			+placeholder 
+				color: #8e8a8c !important
+			&:focus
+				border: 1px solid #e0d9dd !important
+				+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.03))
+			&:focus ~ span,
+			&.notempty ~ span
+				// color: #8f8f8f
+				top: -21px
+				font-size: 13px
+				color: #5f535b
+				text-transform: capitalize
+				// font-weight: 600
+		&>span
+			// color: #b7b7b7
+			top: -21px
+			font-size: 13px
+			left: 20px !important
+			color: #5f535b
+			text-transform: capitalize
+			// font-weight: 600
+	.newinp-block
+		display: block
+		width: 100%
+		
+	input[type="submit"]
+		color: #fff
+		font-size: 16px
+		float: right
+		width: 200px
+		text-align: center
+		line-height: 1
+		text-transform: uppercase
+		background: #b4337f
+		border: none
+		padding: 16px 10px 13px
+		+box-sizing(border-box)
+		+border-radius(4px)
+		letter-spacing: 0.06em
+		margin-top: 25px
+		&:hover
+			background: #bf428c
+		+breakpoint(767px)
+			display: block
+			
+			width: 100%
+.my-info
+	.my-info-item
+		+box-sizing(border-box)
+		padding: 35px
+		// clear: both
+		overflow: hidden
+		font-size: 0
+		line-height: 0
+		+breakpoint(767px)
+			padding: 25px
+		.title
+			+pie-clearfix
+			h4
+				float: left
+			a 
+				float: right
+				+breakpoint(767px)
+					display: none
+		// h4 
+			// margin-bottom: 69px
+.saved-searches
+
+	h4
+		padding-top: 40px
+		padding-left: 30px
+	.saved-searches-item
+		position: relative
+		padding: 25px 35px 20px 55px
+		+box-sizing(border-box)
+		border-bottom: 1px solid #f1f1f1
+		border-top: 1px solid #f1f1f1
+		+transition(0.3s)
+		&:last-child
+			margin-bottom: 30px
+		&:hover
+			background: #fdfdfe
+			+box-shadow(0px 10px 10px 0px rgba(245,247,250,0.25))
+		a 
+			color: #b4337f
+			font-size: 15px
+			line-height: 1
+			&:hover
+				color: #c30876
+		h5
+			font-size: 18px
+			line-height: 1
+			color: #30242b
+			margin-bottom: 13px
+		p 
+			font-size: 14px
+			color: #595055
+			line-height: 1
+	.edit-display-offers
+		+pie-clearfix
+		margin-top: 15px
+	.edit
+		float: left
+	.display-offers
+		float: right
+	.cancel
+		position: absolute
+		right: 15px
+		top: 15px
+		cursor: pointer
+		&:before
+			+font-icon("cancel")
+			font-size: 15px
+			color: #a2aab8
+.po-my-bids
+	.po-my-bids-item
+		border-bottom: 1px solid #f1f1f1
+		font-size: 0
+		line-height: 0
+		+pie-clearfix
+		position: relative
+		&:last-child
+			margin-bottom: 30px
+		&:hover
+			background: #fefefe
+			+box-shadow(0px 10px 10px 0px rgba(0,0,0,0.03))
+			z-index: 2
+	.po-my-bids-item-l
+		float: left
+		border-right: 1px solid #f1f1f1
+		width: 200/890*100%	
+		height: 200px
+		+box-sizing(border-box)
+		+breakpoint(600px)
+			width: 50%
+			height: 231px
+		+breakpoint(475px)
+			width: 100%
+			float: none
+			display: block
+			height: 200px
+			border-right: none
+			border-bottom: 1px solid #f1f1f1
+	.po-my-bids-item-r
+		float: right
+		width: 690/890*100%	
+		height: 200px
+		// +breakpoint(1023px)
+			// height: 230px
+		+breakpoint(600px)
+			float: none
+			width: auto
+			height: auto
+		+breakpoint(475px)
+			clear: both
+	.title
+		border-bottom: 1px solid #f1f1f1
+		h4
+			display: inline-block
+			padding-top: 40px
+			padding-left: 30px
+	.sort-by
+		vertical-align: middle
+		display: inline-block
+		padding-left: 10%
+		a 
+			margin-right: 50px
+			&.active
+				color: #513957
+				pointer-events: none
+				&:before
+					display: none
+	.menu-tile-item-img
+		// width: 200/1180*100%
+		display: block
+		position: relative
+		vertical-align: top
+		text-align: center
+		margin-top: 0
+		height: 200px
+		padding: 18px
+		+box-sizing(border-box)
+		img 
+			height: 165px
+			+transition(0)
+
+		.top 
+			text-transform: uppercase
+			padding: 8px 7px 4px
+			background: #393939
+			color: #fff 
+			font-size: 11px
+			line-height: 12px
+			z-index: 2
+			position: absolute
+			right: 5.5%
+			top: 5%
+			+border-radius(3px)
+			font-weight: bold
+			+transition(0.3s)
+	.menu-tile-item-title
+		width: 380/691*100%
+		max-height: 145px
+		display: inline-block
+		line-height: 20px
+		padding: 40px 25px 10px
+		+box-sizing(border-box)
+		font-size: 15px
+		color: #393939
+		margin-bottom: 15px
+		text-align: left
+		vertical-align: top
+		margin-top: 0px
+		margin-bottom: 0
+		+breakpoint(1023px)
+			padding: 20px 20px 10px
+			width: 50.99276%
+			font-size: 14px
+		+breakpoint(600px)
+			float: left
+			width: 50%
+		+breakpoint(475px)
+			float: none
+			display: block
+			width: 100%
+			border-bottom: 1px solid #f1f1f1
+			padding-bottom: 20px
+		&:before
+			display: none !important
+		.country
+			position: static
+			display: inline-block
+			margin-top: 12px
+			background: #8f5476
+			color: #fff
+			font-size: 13px
+			// font-weight: bold
+			padding: 4px 10px 1px
+			+border-radius(4px)
+			+breakpoint(1023px)
+				margin-top: 0
+			+breakpoint(475px)
+				margin-top: 5px
+			img 
+				vertical-align: baseline
+				margin-right: 8px
+		span 
+			display: block
+	.list-info
+		display: inline-block
+		vertical-align: top
+		width: 310/691*100%
+		padding: 40px 30px
+		height: 145px
+		+box-sizing(border-box)
+		// height: 170px
+		// border-right: 1px solid #f1f1f1
+		border-left: 1px solid #f1f1f1
+		+breakpoint(1023px)
+			height: 115px
+			padding: 20px 20px 15px	
+			width: 48.86252%
+		+breakpoint(600px)
+			float: left
+			width: 50%
+			height: auto
+			border-left: none
+			border-top: 1px solid #f1f1f1
+		+breakpoint(475px)
+			border-top: none
+			float: none
+			width: 100%
+		p 
+			color: #393939
+			font-size: 13px
+			line-height: 20px
+			span
+				+opacity(0.8)
+				width: 59%
+				display: inline-block
+	.sell-buy
+		border-top: 1px solid #f1f1f1
+		padding: 15px 0
+		+breakpoint(600px)
+			clear: both
+		.Premium-seller
+			display: inline-block
+			margin-right: 1%
+			margin-left: 3.7%
+			margin-bottom: 0
+			+breakpoint(1023px)
+				display: block
+				width: 100px
+				margin-bottom: 5px
+		.Trusted-seller
+			display: inline-block
+			margin-bottom: 0
+			+breakpoint(1023px)
+				display: block
+				width: 100px
+				margin-left: 3.7%
+		.menu-tile-item-price
+			color: #393939
+			font-size: 13px
+			line-height: 1
+			width: 310/691*100%
+			padding: 1px 30px
+			+box-sizing(border-box)
+			float: right
+			+breakpoint(1023px)
+				padding: 10px 20px
+				width: 48.86252%
+			span 
+				width: 59%
+				+opacity(0.8)
+				display: inline-block
+			strong
+				font-size: 20px
+				font-weight: bold
+	.po-my-bids-item-full
+		display: block
+		width: 100%
+		clear: both
+		background: #fefefe
+		margin-bottom: 30px
+		border-top: 1px solid #f1f1f1
+		border-bottom: 1px solid #f1f1f1
+		+box-sizing(border-box)
+		padding: 16px 30px 10px
+		+breakpoint(600px)
+			padding: 16px 20px 20px
+		.newinp
+			width: 17%
+			margin: 0px
+			vertical-align: bottom
+			+breakpoint(1023px)
+				width: 25%
+				display: inline-block
+			+breakpoint(600px)
+				width: 184px
+			&>input
+				margin-bottom: 0
+		.plus
+			padding: 8px 8px 7.4px
+			background: #b4337f
+			display: inline-block
+			+border-radius(4px)
+			margin-left: 25px
+			vertical-align: bottom
+			cursor: pointer
+			&:hover
+				background: #bf428c
+			&:after
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				height: 100%
+				width: 0
+			&:before
+				+font-icon("plus-2")
+				font-size: 12px
+				display: inline-block
+				vertical-align: middle
+				line-height: 1
+				color: #fdfcfd
+		.wishes-by
+			display: inline-block
+			vertical-align: bottom
+			margin-bottom: 2px
+			+breakpoint(600px)
+				display: block
+				margin-left: 0
+				margin-top: 20px
+			a 
+
+				&:after
+					+font-icon("cancel")
+					font-size: 8px
+					color: #a2aab8
+					margin-left: 7px
+					+transition(0.3s)
+				&:hover
+					&:after
+						color: #fff
+			span 
+				display: none
+
+.views-history
+	.empty-your-history		
+		// font-size: 15px
+		// color: #b4337f
+		float: right
+		// line-height: 1
+		margin-right: 30px
+		margin-top: 40px
+		position: relative
+		&:after
+			+font-icon("cancel")
+			font-size: 11px
+			color: #b4337f
+			position: absolute
+			left: -23px
+			top: 0
+
+.wishes
+	.wishes-by
+		display: block
+		margin-left: 30px
+		margin-bottom: 30px
+		a
+			font-size: 12px
+			color: #fff
+			display: inline-block
+			vertical-align: top
+			line-height: 1
+			padding: 6px 9px 5px
+			background: #474c55
+			margin-right: 10px
+			+border-radius(4px)
+			+breakpoint(600px)
+				margin-bottom: 8px
+		span 
+			display: inline-block
+	.po-my-bids-item
+		margin-bottom: 30px
+		border-top: 1px solid #f1f1f1
+
+.po-info-bottom-fix
+	display: none
+	height: 42px
+	.select
+		border-top: 1px solid #f1f1f1
+		select 
+			border: none
+	+breakpoint(767px)
+		display: block
+
+.auction-history
+	.title 
+		border-bottom: none
+		h4 
+
+			+breakpoint(1023px)
+				margin-bottom: 20px
+				padding-right: 30px
+			+breakpoint(767px)
+				padding-right: 20px
+				padding-left: 20px
+
+	.sort-by
+		padding-left: 7%
+		+breakpoint(1023px)
+			padding-left: 35px
+			display: block
+			margin-bottom: 20px
+		+breakpoint(767px)
+			padding-left: 20px
+		a 
+			margin-right: 30px
+			+breakpoint(767px)
+				margin-bottom: 3px
+				margin-right: 16px
+			&:last-child
+				margin-right: 0
+	.date 
+		font-size: 13px
+		color: #8e8e8e
+		display: block
+		padding-left: 35px
+		margin-bottom: 20px
+		+breakpoint(767px)
+			padding-left: 20px
+	.auction-history-item
+		color: #30242b
+		padding: 25px 25px 20px
+		+box-sizing(border-box)
+		border-bottom: 1px solid #f1f1f1
+		border-top: 1px solid #f1f1f1
+		font-size: 0
+		line-height: 0
+		&:hover
+			background: #fdfdfe
+			+box-shadow(0px 5px 10px 0px rgba(245,247,250,0.35))
+		&:last-child
+			margin-bottom: 25px
+		p 
+			font-size: 16px
+			width: 475/825*100%
+			display: inline-block
+			vertical-align: top
+			line-height: 16px
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+			+box-sizing(border-box)
+			padding-right: 20px
+			span 
+				font-size: 14px
+				color: #d886b6
+			+breakpoint(767px)
+				display: block
+				width: 100%
+				white-space: normal
+		.time
+			font-size: 14px
+			width: 120/825*100%
+			display: inline-block
+			vertical-align: top
+			line-height: 16px
+			overflow: hidden
+			text-overflow: clip
+			white-space: nowrap
+			+breakpoint(767px)
+				display: inline-block
+				width: auto
+				white-space: normal
+				margin-right: 15px
+		.country
+			color: #5b5257
+			font-size: 14px
+			display: inline-block
+			vertical-align: top
+			width: 225/825*100%
+			line-height: 16px
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+			+box-sizing(border-box)
+			padding-right: 20px
+			+breakpoint(767px)
+				display: inline-block
+				width: auto
+				white-space: normal
+	
+.fixed-po-menu
+	.header-bottom
+		+box-shadow(0px 1px 13px 0px rgba(95, 80, 89, 0))
+	.select
+		position: fixed
+		left: 0
+		right: 0
+		top: 50px
+		z-index: 19
+		background: #fff
+		+box-shadow(0px 1px 13px 0px rgba(95, 80, 89, 0.3))
+		select 
+			border: none 
+			background: #fff
+
+
+.purchases-item
+	font-size: 0
+	line-height: 0
+	border-top: 1px solid #f1f1f1
+	// height: 90px
+	+transition(0.3s)
+	&:hover
+		background: #fdfdfe
+		+box-shadow(0px 8px 10px 0px rgba(#f5f7fa,0.77))
+		.document 
+			color: #30242b
+	&:last-child
+		border-bottom: 1px solid #f1f1f1
+		margin-bottom: 35px
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		height: 100%
+		width: 0
+	.purchases-item-l
+		display: inline-block
+		vertical-align: middle
+		width: 105/890*100%
+		+box-sizing(border-box)
+		padding: 8px
+		// height: 90px
+		img 
+			display: block
+			height: 100%
+			max-height: 73px
+	.purchases-item-r
+		display: inline-block
+		vertical-align: middle
+		width: 780/890*100%
+		+box-sizing(border-box)
+		// padding-left: 30px
+		border-left: 1px solid #f1f1f1
+		padding: 12px 30px 8px
+		// height: 90px
+		h5
+			color: #b4337f
+			font-size: 16px
+			line-height: 1
+			// overflow: hidden
+			// text-overflow: ellipsis
+			// white-space: nowrap
+			margin-bottom: 8px
+	.date-document
+		+pie-clearfix
+		font-size: 14px
+		line-height: 16px
+	.date 
+		color: #575757
+		float: left
+	.document
+		color: #787376
+		float: right
+		+transition(0.3s)
+		span
+			font-size: 8px
+			display: inline-block
+			vertical-align: top
+			color: #cf1919
+			text-transform: uppercase
+			padding-right: 4px
+			font-weight: bold
+			line-height: 10px
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

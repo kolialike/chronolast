@@ -1,0 +1,278 @@
+.adv-search
+	+pie-clearfix
+	h3
+		color: #30242b
+		display: block
+		line-height: 30px
+		letter-spacing: 0.06em
+		margin-bottom: 40px
+	.main-content-container
+		position: relative
+		
+		&:before
+			content: ""
+			right: 0
+			top: 0
+			bottom: 0
+			height: 100%
+			position: absolute
+			width: 350/1180*100%
+			background: #fbfbfb
+			z-index: 0
+			+breakpoint(767px)
+				display: none
+.adv-search-l
+	float: left
+	width: 830/1180*100%
+	// +box-sizing(border-box)
+	// padding: 55px 50px
+	background: #fff
+	font-size: 0
+	line-height: 0
+	+breakpoint(767px)
+		display: block
+		float: none
+		width: 100%
+	h3 
+		font-size: 30px
+.adv-search-r
+	float: right
+	width: 350/1180*100%
+	+box-sizing(border-box)
+	padding: 55px 50px
+	position: relative
+	z-index: 1
+	+breakpoint(767px)
+		display: none
+
+	h3 
+		font-size: 24px
+	// ul 
+		// list-style: square outside
+	li
+		list-style: inside
+		color: #b4337f
+		font-size: 14px
+		line-height: 1
+		margin-bottom: 20px
+		a 
+			color: #b4337f
+.adv-search-tabs
+	&>.tabs-content
+		+transition(0.3s)
+		+opacity(0)
+		max-height: 0
+		overflow: hidden
+		&.active
+			+opacity(1)
+			max-height: 3000px
+
+
+.adv-search-tabs-item
+	border-top: 2px solid #e4e4e6
+	+box-sizing(border-box)
+	padding: 40px 50px
+	+breakpoint(1023px)
+		padding: 20px 20px
+	.newinp
+		margin-bottom: 35px
+		margin-top: 21px
+		display: inline-block
+		vertical-align: top
+		width: 350/730*100%
+		margin-right: 3.97161%
+		+breakpoint(600px)
+			margin-right: 0
+			width: 100%
+			display: block
+			
+		&:nth-child(even)
+			margin-right: 0
+		&>input
+			border-color: #f1f1f1
+			color: #30242b
+			font-size: 14px
+			// margin-bottom: 40px
+			border: 1px solid #f2f0f1 !important
+			+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.02))
+			padding-left: 20px !important
+			+placeholder 
+				color: #8e8a8c !important
+			&:focus
+				border: 1px solid #e0d9dd !important
+				+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.03))
+			&:focus ~ span,
+			&.notempty ~ span
+				// color: #8f8f8f
+				top: -21px
+				font-size: 13px
+				color: #5f535b
+				text-transform: capitalize
+				// font-weight: 600
+		&>span
+			// color: #b7b7b7
+			top: -21px
+			font-size: 13px
+			left: 20px !important
+			color: #5f535b
+			text-transform: capitalize
+			// font-weight: 600
+	label
+		font-size: 14px
+		color: #65696f
+		cursor: pointer
+		position: relative
+		display: block			
+		// vertical-align: top	
+		// width: 153px
+		line-height: 1
+		margin-bottom: 13px					
+	label > .checkbox
+		width: 17px
+		height: 17px
+		background: image-url("checkbox.png") no-repeat left center
+		display: inline-block
+		vertical-align: bottom			
+	label > input
+		position: absolute
+		opacity: 0			
+	label > span
+		display: inline-block
+		vertical-align: bottom
+		padding-left: 10px	
+		font-size: 14px
+		color: #393939	
+	label input:checked + .checkbox
+		background-position: -17px 0			
+	label input:checked ~ span
+		color: #a4236e
+	.movement-scope-new
+		width: 33%
+		display: inline-block
+		vertical-align: top
+		padding-right: 20px
+		+box-sizing(border-box)
+		+breakpoint(600px)
+			width: 100%
+			margin-bottom: 20px
+
+		h5 
+			color: #5d4e57
+			font-size: 16px
+			display: block
+			line-height: 1
+			margin-bottom: 25px
+			+breakpoint(1023px)
+				font-size: 15px
+	.select
+		display: inline-block
+		vertical-align: top
+		width: 350/730*100%
+		margin-right: 3.97561%
+		+breakpoint(600px)
+			margin-right: 0
+			width: 100%
+			display: block
+		&:nth-child(even)
+			margin-right: 0
+	.adv-search-tabs-item-input-l
+		display: inline-block
+		vertical-align: top
+		width: 350/730*100%
+		margin-right: 3.97561%
+		+breakpoint(600px)
+			margin-right: 0
+			width: 100%
+			display: block
+		.newinp
+			width: 42%
+			margin-right: 0
+			display: inline-block
+			vertical-align: top
+			
+		&>span 
+			font-size: 16px
+			color: #8e8a8c
+			display: inline-block
+			line-height: 1
+			vertical-align: top
+			width: 15.3%
+			text-align: center
+			
+			margin: 30px 0% 0px
+	input[type="submit"]
+		color: #fff
+		font-size: 16px
+		display: block
+		width: 200px
+		text-align: center
+		line-height: 1
+		text-transform: uppercase
+		background: #b4337f
+		border: none
+		padding: 16px 10px 13px
+		+box-sizing(border-box)
+		+border-radius(4px)
+		letter-spacing: 0.06em
+		margin: 25px auto
+		&:hover
+			background: #bf428c
+		+breakpoint(767px)
+			display: block
+			
+			width: 100%
+.adv-search-l-item
+	// border-bottom: 2px solid #e4e4e6
+	+box-sizing(border-box)
+	padding: 40px 50px 18px
+	+breakpoint(1023px)
+		padding: 20px 20px 18px
+	a
+		color: #646e80
+		font-size: 18px
+		line-height: 1
+		display: inline-block
+		+box-sizing(border-box)
+		padding: 15px 30px 0px
+		position: relative
+		+breakpoint(500px)
+			font-size: 13px
+			padding: 15px 7px 0
+		&:before
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+			font-size: 20px
+			color: #646e80
+			+breakpoint(500px)
+				font-size: 17px
+
+		&:after
+			content: ""
+			display: block
+			width: 0%
+			+transition(0.3s)
+			position: absolute
+			bottom: -20px
+			background: #ba5991
+			height: 2px
+			left: 0
+		&.active
+			color: #ba5991
+			&:before
+				color: #ba5991
+			&:after
+				width: 100%
+	.diamond
+		&:before
+			+font-icon("diamond")
+	.time-1
+		&:before
+			+font-icon("time-1")
+
+
+
+
+
+
+

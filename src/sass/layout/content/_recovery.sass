@@ -1,0 +1,340 @@
+.recovery-content
+	padding: 45px 0
+	+pie-clearfix
+	&:before
+		height: 360px !important
+.recovery
+	h4
+		
+		font-size: 30px
+		line-height: 1
+		display: block
+		margin-bottom: 12px
+		+breakpoint(767px)
+			font-size: 24px
+		+breakpoint(500px)
+			font-size: 21px
+	p 
+		font-size: 13px
+		line-height: 20px
+		margin-bottom: 25px
+		display: block
+		// +breakpoint(767px)
+			// font-size: 24px
+		+breakpoint(500px)
+			font-size: 12px
+			line-height: 18px
+
+	.newinp
+		position: relative
+		
+		&>input
+			border-color: #f1f1f1
+			color: #30242b
+			margin-bottom: 30px
+			&:focus
+				border-color: #e0e0e0
+			&:focus ~ span,
+			&.notempty ~ span
+				color: #8f8f8f
+		&>span
+			color: #b7b7b7
+	input[type="submit"]
+		color: #fff
+		font-size: 16px
+		float: right
+		width: 200px
+		text-align: center
+		line-height: 1
+		text-transform: uppercase
+		background: #b4337f
+		border: none
+		padding: 16px 10px 13px
+		+box-sizing(border-box)
+		+border-radius(4px)
+		letter-spacing: 0.06em
+		margin-top: 25px
+		+transition(0.3s)
+		+breakpoint(1023px)
+			display: block
+			width: 100%
+			float: none
+		&:hover
+			background: #bf428c
+		&.log-in
+			+breakpoint(1200px)
+				display: block
+				width: 100%
+				float: none
+	.recovery-l
+		+box-sizing(border-box)
+		padding: 50px 55px
+		background: #fff
+		+box-shadow(0px 0px 20px 0px rgba(57,57,57,0.1))
+		float: left 
+		width: 520/1180*100%
+		+breakpoint(1023px)
+			padding: 35px 30px
+		+breakpoint(767px)
+			float: none
+			display: block
+			width: 100%
+		h4
+			color: #53484e
+		p 
+			color: #82797e
+		.link-style
+			margin-top: 41px
+			+breakpoint(1200px)
+				// text-align: center
+				width: 147px
+				display: block
+				margin: 30px auto 0px
+				
+	.recovery-r
+		float: right
+		width: 660/1180*100%
+		text-align: center
+		+box-sizing(border-box)
+		padding: 50px 55px
+		+breakpoint(1023px)
+			padding: 35px 00px
+		+breakpoint(767px)
+			float: none
+			display: block
+			width: 100%
+			padding-top: 45px
+		// .link-style
+			// margin-top: 20px
+		h4
+			color: #30242b
+		p 
+			color: #776b72
+		span 
+			color: #30242b
+			font-size: 20px
+			display: block
+			+breakpoint(767px)
+				font-size: 16px
+			&:before
+				font-size: 20px
+				margin-bottom: 10px
+				display: block
+				color: #dddbdc
+	.back 
+		color: #b4337f
+		font-size: 16px
+		text-transform: uppercase
+		margin-top: 44px
+		float: left
+		+breakpoint(1023px)
+			margin-top: 30px
+		+breakpoint(767px)
+			float: none
+			display: inline-block
+		&:hover
+			color: #c23e8c	
+		&:before
+			+font-icon("arrow")
+			font-size: 9px
+			// line-height: 8
+			margin-top: 2px
+			transform: rotate(180deg)
+			display: inline-block
+			vertical-align: top
+			margin-right: 8px
+			color: #b4337f
+	.phone
+		margin-bottom: 30px
+		&:before
+			+font-icon("telephone")
+			
+	.email
+		&:before
+			+font-icon("mail")
+	label
+		font-size: 14px
+		color: #65696f
+		cursor: pointer
+		position: relative
+		display: block			
+		// vertical-align: top	
+		// width: 153px
+		line-height: 1
+		margin-bottom: 13px					
+	label > .checkbox
+		width: 17px
+		height: 17px
+		background: image-url("checkbox.png") no-repeat left center
+		display: inline-block
+		vertical-align: middle			
+	label > input
+		position: absolute
+		opacity: 0			
+	label > span
+		display: inline-block
+		vertical-align: middle
+		padding-left: 10px	
+		font-size: 14px
+		color: #393939	
+		width: 92%	
+		padding-top: 2px
+	label input:checked + .checkbox
+		background-position: -17px 0			
+	label input:checked ~ span
+		color: #a4236e
+	.recovery-r-container
+		text-align: justify
+		+breakpoint(767px)
+			text-align: center
+			 
+		.recovery-img
+			display: block
+			margin: auto
+			text-align: center
+			margin-bottom: 20px
+		&:after
+			content: ""
+			display: inline-block
+			text-align: justify
+			width: 100%
+			height: 0
+		&>div
+			display: inline-block
+			font-size: 14px
+			color: #6c6c6c
+			margin-bottom: 20px
+			padding: 0 20px
+	.show-password
+		position: absolute
+		right: 15px
+		top: 15px
+		z-index: 121
+		&:before
+			+font-icon("eye-1")
+			font-size: 15px
+			line-height: 1
+			color: #f4c2e0
+			display: inline-block
+
+
+.create-new-account-l
+	font-size: 0
+	line-height: 0
+	float: left
+	width: 780/1180*100%
+	+box-shadow(0px 0px 20px 0px rgba(57,57,57,0.1))
+	background: #fff
+	padding: 50px 55px
+	+box-sizing(border-box)
+	+breakpoint(767px)
+		float: none
+		display: block
+		width: 100%
+		padding: 30px 20px
+	h3
+		color: #53484e
+		display: block
+		font-size: 30px
+		line-height: 1
+		margin-bottom: 20px
+	h4
+		color: #30242b
+		font-size: 20px
+		display: block
+		margin-bottom: 40px
+	p 
+		font-size: 13px
+		line-height: 20px
+		color: #82797e
+		display: block
+		margin-bottom: 40px
+
+	.newinp
+		display: inline-block
+		vertical-align: top
+		width: 315/670*100%
+		margin-right: 5.87561%
+		// margin-bottom: 47px
+		margin-bottom: 35px
+		// margin-top: 20px
+		&:nth-child(even)
+			margin-right: 0
+		+breakpoint(767px)
+			margin-right: 0
+			display: block
+			width: 100%
+	.newinp-block
+		display: block
+		width: 100%
+	.select
+		border-bottom: 2px solid #f1f1f1
+		margin-bottom: 20px
+		width: 315/670*100%
+		margin-right: 5.87561%
+		display: inline-block
+		vertical-align: top
+		+breakpoint(767px)
+			margin-right: 0
+			display: block
+			width: 100%
+		&:focus
+			border-color: #e0e0e0
+		select
+			font-size: 13px
+			border: none
+			text-transform: uppercase
+			color: #b7b7b7
+			padding: 15px 8px 11px
+			height: 40px
+	a 
+		color: #d074aa
+		&:hover
+			color: #c0689c
+	input[type="submit"]
+		color: #fff
+		font-size: 16px
+		float: left
+		width: 200px
+		text-align: center
+		line-height: 1
+		text-transform: uppercase
+		background: #b4337f
+		border: none
+		padding: 16px 10px 13px
+		+box-sizing(border-box)
+		+border-radius(4px)
+		letter-spacing: 0.06em
+		margin-top: 35px
+		&:hover
+			background: #bf428c
+		+breakpoint(767px)
+			display: block
+			
+			width: 100%
+.create-new-account-r
+	+breakpoint(767px)
+		float: none
+		display: block
+		width: 100%
+		padding: 30px 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

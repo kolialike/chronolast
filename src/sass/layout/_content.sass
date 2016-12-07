@@ -1,0 +1,1805 @@
+@import content/catalog
+@import content/po-info
+@import content/recovery
+@import content/advance-search
+@import content/watches
+
+.main-slider
+	position: relative
+	.swiper-container
+		width: 100%
+		height: 380px
+		margin-left: auto
+		margin-right: auto
+	.swiper-slide
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		text-align: center
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			
+			height: 100%
+			width: 0
+		img 
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			
+	.gallery-top
+		height: 380px
+		width: 100%
+		border-bottom: 1px solid #f2f2f2
+		.swiper-slide
+			+transition(0.4s)
+			&:hover
+				transform: scale(1.8)
+	.gallery-thumbs
+		height: 180px
+		box-sizing: border-box
+		padding: 49.5px 0px
+		width: 78%
+	.gallery-thumbs .swiper-slide
+		width: 81px
+		height: 81px
+		// +opacity(0.8)
+		border: 1px solid rgba(#c0c0c0, 0.3)
+		+box-shadow(0px 0px 16px 0px rgba(0,0,0,0.05))
+		cursor: pointer
+		// opacity: 0.4
+		&:hover
+			border: 1px solid rgba(#c0c0c0, 1)
+			+box-shadow(0px 0px 16px 0px rgba(0,0,0,0.03))
+	.gallery-thumbs .swiper-slide-active
+		border: 1px solid rgba(#c0c0c0, 1)
+		+box-shadow(0px 0px 16px 0px rgba(0,0,0,0.03))
+	
+	// .swiper-wrapper
+		// padding: 0 40px
+	.swiper-button-prev, .swiper-button-next
+		// width: 65px
+		// height: 60px
+		bottom: 67px
+		z-index: 1
+		top: auto
+		margin-top: 0
+		text-align: center
+		background-image: none
+		+transition(0.3s)
+		right: 20px
+		&:before
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			width: 0
+			content: ""
+		&:after
+			+font-icon("arrow")
+			display: inline-block
+			font-size: 14px
+			color: #644959
+			vertical-align: middle
+			+transition(0.3s)
+			line-height: 15px
+		&:hover
+			// background: #b24484
+			// +box-shadow(0px 1px 33px 0px rgba(95,80,89,0.25))
+			&:after
+				color: #5a404f
+	.swiper-button-prev
+		left: 20px
+		right: auto
+		// border-right: 1px solid #f1f1f1
+		&:after
+			transform: rotate(180deg)
+	.swiper-button-next
+		&:after
+			margin-top: 7px
+
+.link-style
+	display: inline-block
+	font-size: 14px
+	line-height: 16px
+	color: #a4236e
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		bottom: 1px
+		display: block
+		width: 100%
+		left: 0
+		right: 0
+		height: 1px
+		border-bottom: 1px dotted rgba(#a4236e, 0.45)
+		+transition(0.3s)
+	&:hover
+		&:before
+			border-bottom: 1px dotted transparent
+
+.btn
+	height: 45px
+	background: #b24484
+	color: #fff
+	text-transform: uppercase
+	font-size: 16px
+	line-height: 1
+	display: block
+	padding: 7px 10px 10px
+	+box-sizing(border-box)
+	text-align: center
+	+border-radius(4px)
+
+.datamodal
+	position: fixed
+	bottom: 0
+	top: 0
+	right: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background: rgba(#000, 0.6)
+	z-index: 222
+	+opacity(0)
+	font-size: 0
+	line-height: 0
+	max-height: 0
+	overflow: hidden
+	// display: none
+	+transition(0.3s)
+	text-align: center
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		width: 0
+		height: 100%
+	.datamodal-container
+		background: #fff
+		+border-radius(8px)
+		max-width: 500px
+		width: 99%
+		display: inline-block
+		vertical-align: middle
+		
+		position: relative
+		z-index: 222
+		text-align: left
+		overflow: hidden
+		h6
+			font-size: 14px
+			line-height: 1.3
+			color: #1d161a
+			padding-right: 20px
+	&>.modalclose
+		position: absolute
+		bottom: 0
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		width: 100%
+		cursor: pointer
+	.datamodal-container-top
+		position: relative
+		padding: 22px 25px 18px
+		.modalclose
+			display: inline-block
+			position: absolute
+			right: 20px
+			top: 25px
+			&:before
+				display: inline-block
+				font-size: 14px
+				line-height: 1
+				+font-icon("cancel")
+				color: #525252
+	.datamodal-container-bottom
+		.timer-sell
+			padding-right: 25px
+			padding-left: 25px
+	.datamodal-container-bottom-container
+		.left
+			float: left
+			width: 220/500*100%
+			background: #fdfdfd
+			padding: 28px 20px 20px
+			+box-sizing(border-box)
+			+breakpoint(500px)
+				float: none
+				display: block
+				width: 100%
+			span 
+				color: #55534c
+				font-size: 14px
+			.btn-red
+				padding: 10px 10px 9px
+				height: 35px
+				&:hover
+					background: #b32c7a
+		.right
+			float: right
+			width: 280/500*100%
+			background: #fdfaee
+			padding: 28px 20px 20px
+			+box-sizing(border-box)
+			color: #55534c
+			font-size: 0
+			line-height: 0
+			+breakpoint(500px)
+				float: none
+				display: block
+				width: 100%
+			p
+				font-size: 14px
+				line-height: 16px
+				margin-bottom: 10px
+			span 
+				font-size: 12px
+				line-height: 1.2
+				display: block
+				margin-top: 23px
+				margin-bottom: 4px
+			.btn-red
+				margin-top: 0
+				&:hover
+					background: #b32c7a
+
+		.btn-red
+			background: #a4236e
+			&:hover
+				background: #b32c7a
+	&.active
+		// display: block
+		max-height: 2000px
+		+opacity(1)
+		
+.times
+	&>div
+		display: inline-block
+		text-align: center
+		padding: 0 15px
+		border-right: 1px solid #e6dcbd
+		&:last-child
+			border-right: none
+			padding-right: 0
+		strong
+			display: block
+			font-size: 22px
+			color: #772d59
+			line-height: 1
+		span
+			color: #6e6445
+			font-size: 12px
+			line-height: 1
+		+breakpoint(600px)
+			padding: 0 13px
+			&:first-child
+				padding-left: 0
+	.days
+
+// .pages
+// 	margin-top: 40px
+// 	margin-bottom: 23px
+// 	font-size: 0
+// 	line-height: 0
+// 	// background: #fbfbfb
+// 	a 
+// 		display: inline-block
+// 		vertical-align: top
+// 		padding: 10px 25px 8px
+// 		// +border-radius(0px 2px 2px 0px)
+// 		background: #f5f5f5
+// 		+box-shadow(inset 7px 0px 14px -11px rgba(57, 57, 57, 0.62))
+// 		font-size: 13px
+// 		line-height: 16px
+// 		color: #7b6f6f
+// 		&:first-child
+// 			+box-shadow(inset 3px 0px 14px -5px rgba(57, 57, 57, 0))
+// 		&:last-child
+// 			background: #ba5991
+// 			color: #fbfbfb
+// 			pointer-events: none
+
+.pages
+	background: #fbfbfb
+	padding: 22px 0 20px
+	font-size: 0
+	line-height: 0
+	+breakpoint(1180px)
+		display: none
+	.pages-container
+		border: 1px solid #f1f1f1
+		display: inline-block
+	a 
+		font-size: 13px
+		line-height: 13px
+		color: #ad668f
+		background: #fff
+		position: relative
+		margin-right: 0px
+		padding: 9px 30px 8px
+		display: inline-block
+		vertical-align: middle
+		box-sizing: border-box
+		height: 28px
+		&:hover
+			color: #b4337f
+
+			// background: #fff
+			// &:after
+				// border-left: 13px solid #b61a29
+				// border-left-color: #b61a29
+		// &:before
+		// 	content: ""
+		// 	position: absolute
+		// 	width: 0
+		// 	height: 0
+		// 	border: 15px solid transparent
+		// 	left: 0
+		// 	border-left: 13px solid #eef0f4
+		// 	border-left-color: #eef0f4
+		// 	border-right: 0
+		// 	top: 0
+		// 	bottom: 0
+		&:after
+			content: ""
+			position: absolute
+			right: -30px
+			top: 0
+			bottom: 0
+			background: image-url("shadow.png") no-repeat left center
+			z-index: 1
+			width: 30px
+			+opacity(0.45)
+			// width: 0
+			// height: 0
+			// border: 15px solid transparent
+			// right: -10px
+			// border-left: 13px solid #ccc
+			// border-left-color: #ccc
+			// border-right: 0
+			// z-index: 1
+			// transition: 0.3s
+			// +box-shadow(10px 0px 5px 0px rgba(0,0,0,0.75))
+
+		&:last-child
+			// color: #30426b
+			// background: #dbdee6
+			// margin-left: -4px
+			pointer-events: none
+			// border-radius: 0px 5px 5px 0px
+			color: #8b8287
+			&:after
+				display: none
+
+		span 
+			padding: 0 13px
+	.home
+		// border-radius: 4px 0px 0px 4px
+		padding: 9px 0px 8px
+		&:before
+			display: none
+		&:hover
+			img 
+				+opacity(0.7)
+		img 
+			+transition(0.3s)
+		// span 
+		// 	position: absolute
+		// 	t
+		// 	&:before
+		// 		+font-icon("home")
+		// 		font-size: 15px
+		// 		color: #f8f9fb
+
+
+.main-content
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		height: 250px
+		width: 100%
+		right: 0
+		left: 0
+		background: #fbfbfb
+		
+.main-content-container
+	background: #fff
+	+box-shadow(0px 4px 35px -3px rgba(0, 0, 0, 0.15))
+	+pie-clearfix
+	margin-bottom: 60px
+	.main-slider
+		float: left
+		width: 600/1180*100%
+		.auction-sale-top
+			display: none
+			padding: 30px 6% 20px
+			background: #f7f7f7
+			h3
+				display: block
+				font-size: 24px
+				line-height: 32px
+				color: #3b3b3b
+			.available-now
+				display: block
+				font-size: 15px
+				color: #488e46
+				line-height: 20px
+				margin-top: 8px
+				&:before
+					+font-icon("check")
+					display: inline-block
+					margin-right: 8px
+					font-size: 15px
+					vertical-align: baseline
+			+breakpoint(1150px)
+				display: block
+		+breakpoint(1150px)
+			width: 100%
+			float: none
+			
+	.auction-sale
+		float: right
+		width: 580/1180*100%
+		+breakpoint(1150px)
+			width: 100%
+			float: none
+
+.slider-auction-sale
+	+pie-clearfix
+	border-bottom: 1px solid #f0f0f0
+
+.auction-sale
+	.timer-sell-l
+		float: left
+		+breakpoint(600px)
+			display: block
+			float: none
+			width: 100%
+			margin-bottom: 15px
+	h3
+		display: block
+		font-size: 24px
+		line-height: 32px
+		color: #3b3b3b
+	.auction-sale-top
+		padding: 30px 6% 20px
+		background: #f7f7f7
+		+breakpoint(1150px)
+			display: none
+	.available-now
+		display: block
+		font-size: 15px
+		color: #488e46
+		line-height: 20px
+		margin-top: 8px
+		&:before
+			+font-icon("check")
+			display: inline-block
+			margin-right: 8px
+			font-size: 15px
+			vertical-align: baseline
+	.price
+		color: #2a2a2a
+		font-size: 16px
+		line-height: 18px
+		strong
+			font-weight: bold
+	.bids
+		// color: #a4236e
+		// font-size: 14px
+		// line-height: 16px		
+		display: inline-block
+		// border-bottom: 1px dotted rgba(#a4236e, 0.45)
+		margin-top: 6px
+		// position: relative
+		// padding-right: 20px
+		&:hover
+			// border-bottom: 1px dotted transparent
+		&:after
+			// content: ""
+			display: inline-block
+			position: absolute
+			right: -13px
+			top: 0px
+			font-size: 8px
+			transform: rotate(90deg)
+			// width: 5px
+			// height: 5px
+			// border: 2px solid
+			// border-color:  transparent #bb508c #bb508c  transparent
+			+font-icon("arrow")
+			margin-left: 9px
+			+transition(0.3s)
+	.timer-sell
+		background: #fef4d5
+		padding: 22px 6% 20px
+		position: relative
+		+pie-clearfix
+	.timer
+		float: right
+		+breakpoint(600px)
+			display: block
+			float: none
+			width: 100%
+
+.sell-buy
+	+pie-clearfix
+	.sell-buy-l
+		float: left
+		+box-sizing(border-box)
+		width: 50%
+		min-height: 209px
+		padding: 25px 5.5% 15px
+		background: #f9f8f3
+		+breakpoint(1100px)
+			min-height: 225px
+		+breakpoint(600px)
+			float: none
+			display: block
+			width: 100%
+		.buy-price
+			display: none
+		.sell-buy-r-submenu
+			display: none
+	label
+		span
+			display: block
+			color: #55534c
+			font-size: 14px
+			line-height: 16px
+			margin-bottom: 10px
+		input 
+			border: 1px solid #ebebeb
+			background: #fff
+			+border-radius(3px)
+			height: 40px
+			padding: 12px 10px 11px
+			box-sizing: border-box
+			display: block
+			width: 100%
+			color: #848484
+			font-size: 14px
+			line-height: 14px
+			+placeholder 
+				color: #8f8f8f
+				font-size: 14px
+				line-height: 14px
+				+transition(0.3s)
+			&:focus
+				+placeholder
+					+opacity(0)
+	input[type="submit"]
+		+border-radius(3px)
+		display: block
+		margin-top: 20px
+		width: 100%
+		text-transform: uppercase
+		border: none
+		font-size: 15px
+		color: #fff
+		line-height: 20px
+		height: 40px
+		padding: 11px 10px 11px
+		background: #a4236e
+		font-weight: 600
+		+transition(0.3s)
+		&:hover
+			background: #b32c7a
+	.automatic-bid
+		text-align: center
+		a 
+			display: inline-block
+			text-align: center
+			font-size: 14px
+			line-height: 15px
+			color: #a4236e
+			border-bottom: 1px dotted rgba(#a4236e, 0.45)
+			margin-top: 21px
+			&:hover
+				border-bottom: 1px dotted transparent
+	.sell-buy-r
+		float: right
+		+box-sizing(border-box)
+		width: 50%
+		min-height: 209px
+		padding: 25px 5.5% 15px
+		background: #fdfaee
+		+breakpoint(1100px)
+			min-height: 225px
+		+breakpoint(600px)
+			float: none
+			display: block
+			width: 100%
+	.buy-price
+		display: block
+		box-sizing: border-box
+		// padding: 12px 0 8px
+		// background: #fef7df
+		color: #666666
+		// text-align: center
+		font-size: 18px
+		line-height: 20px
+		strong
+			color: #424036
+			font-size: 26px
+			line-height: 1.1
+	.buy-seller
+		font-size: 15px
+		color: #928e80
+		// display: block
+		margin-bottom: 10px
+		line-height: 1.2
+		display: none
+	.buy-it-now
+		display: block
+		height: 40px
+		padding: 12px 10px 11px
+		box-sizing: border-box
+		text-transform: uppercase
+		background: #5e9b5c
+		margin-top: 20px
+		color: #fff
+		font-size: 16px
+		line-height: 20px
+		text-align: center
+		font-weight: 600
+		+border-radius(3px)
+		&:hover
+			background: #67a965
+	.buy-it-now-rose
+		background: #b4337f
+		display: none
+
+	.can-buy-now
+		display: block
+		line-height: 16px
+		font-size: 12px
+		// margin-top: 15px
+		margin-bottom: -6px
+		color: #55534c
+		margin-top: 2px
+		// text-align: center
+	.Luxury
+		display: none
+		font-size: 24px
+		color: #545145
+		line-height: 26px
+		margin-bottom: 14px
+	.Premium-seller
+		display: none
+		font-size: 12px
+		line-height: 1.1
+		color: #674c1b
+		padding: 6px 8px 5px
+		min-width: 121px
+		margin-bottom: 10px
+		+border-radius(5px)
+		background: #deb770
+		+transition(0.3s)
+		&:before
+			+font-icon("crown")
+			display: inline-block
+			vertical-align: middle
+			color: #7f5f27
+			margin-right: 8px
+		&:hover
+			background: #e5ba6f
+	.Trusted-seller
+		display: none
+		padding: 6px 8px 5px
+		min-width: 121px
+		margin-bottom: 10px
+		font-size: 12px
+		line-height: 1.1
+		+border-radius(5px)
+		color: #666769
+		background: #e0e0e0
+		+transition(0.3s)
+		&:before
+			+font-icon("medal")
+			display: inline-block
+			vertical-align: middle
+			color: #666769
+			margin-right: 8px
+		&:hover
+			background: #e5e5e5
+	.US-New-York
+		display: none
+		font-size: 16px
+		color: #7f7864
+		margin-top: 10px
+		.US-New-York-img
+			display: inline-block
+			border: 1px solid rgba(#e1d2a2, 0.4)
+			margin-right: 20px
+			padding: 1px
+			img
+				display: block
+	.cannot-buy-now
+		display: none
+	.This-product
+		display: none
+		color: #666666
+		font-size: 13px
+		margin-top: 6px
+		line-height: 18px
+		background: #f0f0f0
+		padding: 14px 10px 13px 60px
+		position: relative
+		&:before
+			+font-icon("arrows")
+			position: absolute
+			left: 12px
+			font-size: 29px 
+			color: #9a9a9a
+			transform: rotate(180deg)
+			top: 50%
+			margin-top: -11px
+			+breakpoint(600px)
+				transform: rotate(270deg)
+	.auction-price
+		font-size: 15px
+		color: #928e80
+		line-height: 17px
+	.auction-price
+		margin-bottom: 7px
+		display: block
+	.sell-buy-r-submenu
+		display: block
+		+pie-clearfix
+		margin-top: 12px
+		.sell-buy-r-submenu-item
+			width: 33%
+			font-size: 14px
+			float: left
+			line-height: 1
+			p
+				color: #958d74
+				margin-bottom: 4px
+				font-weight: bold
+			span 
+				color: #2b2921
+
+.bids-container
+	position: absolute
+	left: 0
+	width: 100%
+	+opacity(0)
+	top: 84px
+	max-height: 0
+	overflow: hidden
+	+transition(0.45s)
+	background: #fff
+	+box-shadow(0px 1px 5px 0px rgba(95,80,89,0.3))
+	table
+		width: 100%
+	thead
+		tr 
+			border-bottom: 2px solid #f5f4f2
+	tr 
+		border-bottom: 1px solid #f5f4f2
+		// padding: 0 40px
+	th,td
+		padding: 15px 0px 10px
+		font-size: 14px
+		color: #30242b
+		padding-left: 40px
+	th 
+		color: #545454
+		line-height: 1
+		// &:first-child
+	.bids-name
+		color: #553447
+	.bids-price
+		font-weight: bold
+.bids-open
+	.bids 
+		&:after
+			transform: rotate(270deg)
+			top: -2px
+			right: -15px
+	.bids-container
+		+opacity(1)
+		max-height: 600px
+		z-index: 2
+
+.auction-sale-bottom
+	background: #fdfaee
+	color: #7f7864
+	font-size: 14px
+	line-height: 20px
+	display: none
+	p
+		position: relative
+		padding: 20px 35px 20px 21%
+		&:before
+			+font-icon("circle")
+			display: inline-block
+			font-size: 50px
+			line-height: 0
+			color: #e9e6d9
+			position: absolute
+			left: 8.5%
+			top: 50%
+			margin-top: 5px
+			+breakpoint(600px)
+				// position: static
+				
+				// display: inline-block
+				// vertical-align: middle
+				left: 22px
+		+breakpoint(600px)
+			padding-left: 90px
+			font-size: 13px
+.seling
+	.buy-it-now-rose
+		display: block
+		margin-top: 0
+		margin-bottom: 21px
+	.timer-sell
+		display: none
+	label
+		display: none
+	input[type="submit"]
+		display: none
+	.automatic-bid
+		display: none
+	.auction-sale-bottom
+		display: block
+	.sell-buy-l
+		background: #fef4d5
+		.buy-price
+			display: block
+		.sell-buy-r-submenu
+			display: block
+	.sell-buy-r
+		background: #fdfcf7
+		.buy-it-now
+			display: none
+		.buy-price
+			display: none
+	.buy-price
+		background: transparent
+		text-align: left
+		padding-top: 0
+		padding-bottom: 15px
+		line-height: 26px
+	.buy-seller
+		display: block
+	.Luxury
+		display: block
+	
+	.can-buy-now
+		display: none
+	.Premium-seller
+		display: inline-block
+	.Trusted-seller
+		display: inline-block
+	.US-New-York
+		display: block
+	.auction-price
+		display: none
+	.sell-buy-r-submenu
+		display: none
+	
+
+.auction-selling
+	.sell-buy
+		.buy-it-now
+			background: #9a9a9a
+			pointer-events: none
+			margin-top: 10px
+		input[type="submit"]
+			margin-top: 15px
+	.can-buy-now
+		display: none
+	.cannot-buy-now
+		display: block
+		margin-top: 20px
+		font-size: 13px
+		line-height: 1
+		letter-spacing: 0.04em
+		color: #55534c
+	.sell-buy-l
+		background: #fdfcf7
+		.auction-price
+			display: block
+		
+	.sell-buy-r
+		background: #f9f9f9
+		.buy-price
+			display: none
+	.This-product
+		display: block
+	.auction-price
+		display: none
+	.sell-buy-r-submenu
+		display: none
+	.sell-buy-r-submenu
+		display: none
+
+
+.services
+	background: #f7f7f7
+	padding: 35px 0 25px
+	box-sizing: border-box
+	+pie-clearfix
+	+breakpoint(600px)
+		padding: 20px 0
+	.services-l
+		float: left
+		width: 50%
+		+box-sizing(border-box)
+		padding: 11px 35px
+		border-right: 1px solid rgba(#e0e0e0, 0.75)
+		+breakpoint(600px)
+			float: none
+			display: block
+			width: 100%
+			padding: 11px 20px 20px
+			text-align: center
+			
+		p 
+			display: inline-block
+			position: relative
+			padding: 17px 20px 12px 40px
+			font-size: 14px
+			line-height: 14px
+			color: #ba5991
+			background: #f1e7ed
+			text-transform: uppercase
+			margin-left: 25px
+			+border-radius(0px 5px 5px 0px)
+			cursor: pointer
+			letter-spacing: 0.02em
+			+transition(background 0.3s)
+			+breakpoint(600px)
+				width: 208px
+				+box-sizing(border-box)
+			&:before
+				+font-icon("favorite")
+				position: absolute
+				top: -3.5px
+				left: 0
+				+border-radius(100%)
+				background: #ba5991
+				padding: 18px 16px 10px
+				font-size: 18px
+				line-height: 22px
+				color: #e69cc7
+				margin-left: -25px
+				+box-shadow(0px 0px 10px 0px rgba(186,89,145,0.71))
+			&:before
+				+font-icon("favorite")
+				background: #ba5991
+				+border-radius(100%)
+				padding: 17px 16px 10px
+				font-size: 18px
+				line-height: 22px
+				color: #dd8ebc
+				// +box-shadow(0px 0px 10px 0px rgba(186,89,145,0.71))
+			&.active
+				&:before
+					// background: #fff
+					color: #fff
+					background: #ba5991
+					// +transition(0.3s)
+				&:hover
+					// margin-top: 138px
+					&:before
+						+font-icon("cancel")
+						color: #fff
+						background: #ba5991
+						// background: #fff
+						// padding: 17px 18px 14px
+						// font-size: 14px
+						font-size: 14px
+						padding: 15px 18px 12px
+						// color: #b14785
+						// +transition(0.3s)
+			&:hover
+				background: #efdae6
+				&:before
+					background: #c9669f
+					color: #e69cc7
+
+	.services-r
+		float: right
+		width: 50%
+		+box-sizing(border-box)
+		padding: 0 35px
+		z-index: 0
+		line-height: 0
+		position: relative
+		+breakpoint(600px)
+			float: none
+			display: block
+			width: 100%
+			padding: 11px 20px
+	.services-r-item
+		display: inline-block
+		vertical-align: top
+		text-align: center
+		width: 31%
+		cursor: pointer
+		&:before
+			color: #ba5991
+		&:hover
+			h4
+				color: #a4236e
+			&:before
+				color: #a4236e
+		&.active
+			h4
+				color: #a4236e
+				&:before
+					color: #a4236e
+			.services-r-item-text
+				+opacity(1)
+				padding: 25px
+				max-height: 500px
+		h4
+			font-size: 12px
+			color: #ba5991
+			line-height: 14px
+			&:before
+				color: #ba5991
+				
+	.world
+		&:before
+			+font-icon("world")
+			display: block
+			font-size: 40px
+			margin-bottom: 5px
+			line-height: 1.1
+	.baggage
+		&:before
+			+font-icon("baggage")
+			display: block
+			font-size: 40px
+			margin-bottom: 5px
+			line-height: 1.1
+	.travel
+		&:before
+			+font-icon("business")
+			display: block
+			font-size: 40px
+			margin-bottom: 5px
+			line-height: 1.1
+	.inactive
+		pointer-events: none
+		h4
+			color: #ababab !important
+		&:before
+			color: #ababab !important
+	.services-r-item-text
+		box-sizing: border-box
+		+box-shadow(0px 1px 40px 0px rgba(95,80,89,0.1))
+		position: absolute
+		z-index: 1
+		padding: 0 25px
+		width: -186px
+		right: 0
+		top: 91px
+		width: 280px
+		text-align: left
+		background: #fff
+		+opacity(0)
+		max-height: 0
+		overflow: hidden
+		+transition(0.5s)
+		+breakpoint(600px)
+			top: 106px
+		h5
+			display: block
+			font-size: 18px
+			color: #494949
+			line-height: 18px
+			font-weight: bold
+			margin-bottom: 12px
+		span
+			display: block
+			font-size: 14px
+			color: #2f2f2f
+			line-height: 17px
+			margin-bottom: 4px
+		p
+			color: #787878
+			font-size: 14px
+			line-height: 17px
+			margin-bottom: 20px
+			display: block
+			&:last-child
+				margin-bottom: 0
+
+
+	
+
+.content-menu
+	border-bottom: 1px solid #f0f0f0
+	// text-align: center
+	padding: 17px 40px 14px
+	height: 52px
+	+box-sizing(border-box)
+	+breakpoint(767px)
+		padding: 15px 20px 15px
+		height: 46px
+		display: none
+	ul
+		max-width: 1180px
+		margin: 0 auto
+		+breakpoint(767px)
+			text-align: justify
+			
+			&:after
+				content: ''
+				display: inline-block
+				text-align: justify
+				width: 100%
+				height: 0
+	li
+		display: inline-block
+		margin: 0 30px
+		+breakpoint(767px)
+			margin: 00px
+		&:first-child
+			margin-left: 0
+		&.active
+			a 
+				color: #a4236e
+	a 
+		color: #5e4d57
+		font-size: 16px
+		line-height: 20px
+		+breakpoint(767px)
+			font-size: 14px
+			line-height: 1.2
+		&:hover
+			color: #a4236e
+		
+
+.main-content-text
+	padding: 45px 40px
+	border-bottom: 1px solid #f0f0f0
+	+breakpoint(767px)
+		padding: 20px 20px
+	h4
+		display: block
+		font-size: 16px
+		line-height: 20px
+		text-transform: uppercase
+		color: #be6799
+		margin-top: 15px
+		margin-bottom: 35px
+		font-weight: bold
+		letter-spacing: 0.08em
+		+breakpoint(767px)
+			margin-bottom: 17px
+		&:before
+			display: inline-block
+			vertical-align: middle
+			font-size: 16px
+			color: #ba5991
+			margin-right: 10px
+			font-weight: 300
+	
+	p
+		display: block
+		font-size: 15px
+		line-height: 24px
+		letter-spacing: 0.08em
+		color: #181818
+		+breakpoint(767px)
+			font-size: 14px
+			line-height: 22px
+	.main-content-text-item-l-r
+		+pie-clearfix
+		// margin-bottom: 60px
+		p
+			font-size: 15px
+			line-height: 1.7
+			color: #181818
+			position: relative
+			+breakpoint(767px)
+				// text-align: right
+				padding: 10px 40/590*100% 4px
+				font-size: 13px
+
+		.span1 
+			display: inline-block
+			margin-right: 30/590*100%
+			margin-left: -40/590*100%
+			width: 240/590*100%
+			+box-sizing(border-box)
+			padding: 10px 40/590*100% 4px
+			border-bottom: 1px solid #e5e5e5
+			color: #3a3a3a
+			vertical-align: top
+			
+			+breakpoint(1150px)
+				margin-left: 0
+				// width: auto
+			+breakpoint(767px)
+				padding: 0
+				border-bottom: none
+				&:after
+					border-bottom: 1px solid #e5e5e5
+					content: ""
+					position: absolute
+					bottom: 0
+					left: 0
+					height: 1px
+					width: 240/590*100%
+		.span2
+			display: inline-block
+			vertical-align: top
+			width: 240/590*100%
+	.main-content-text-item-l
+		display: inline-block
+		vertical-align: top
+		
+		width: 590/1200*100%
+		z-index: 1
+		position: relative
+		margin-bottom: 50px
+		padding-right: 70px
+		+box-sizing(border-box)
+		+breakpoint(1150px)
+			width: 100%
+			display: block
+			font-style: normal
+			margin-bottom: 45px
+			padding-right: 0
+	.main-content-text-item-r
+		display: inline-block
+		vertical-align: top
+		
+		width: 590/1200*100%
+		z-index: 1
+		position: relative
+		margin-bottom: 50px
+		padding-right: 70px
+		+box-sizing(border-box)
+		+breakpoint(1150px)
+			width: 100%
+			display: block
+			font-style: normal
+			margin-bottom: 45px
+			padding-right: 0
+	.basic-info
+		&:before
+			+font-icon("circle-transparent")
+	.caliber
+		&:before
+			+font-icon("tool")
+	.case
+		&:before
+			+font-icon("coint")
+	.braslet
+		&:before
+			+font-icon("belt-buckle")
+			// font-size: 18px
+	.function
+		&:before
+			+font-icon("plus")
+	.others
+		&:before
+			+font-icon("dotted")
+
+.main-content-text-descripton
+	position: relative
+	+pie-clearfix 
+	overflow: hidden
+	&:before
+		content: ''
+		width: 53.2%
+		z-index: 1
+		position: absolute
+		right: 0
+		background: #f9f9f9
+		top: 0
+		display: block
+		bottom: 0
+		height: 100%
+	&:after
+		content: ''
+		width: 46.8%
+		z-index: 0
+		position: absolute
+		left: 0
+		background: #fcfcfc
+		top: 0
+		display: block
+		bottom: 0
+		height: 100%
+	+breakpoint(1150px)
+		&:before
+			width: 100%
+		&:after
+			display: none
+
+
+.Description
+	&:before
+		+font-icon("comment")
+
+	
+.seller
+	h3
+		color: #393939
+		text-transform: uppercase
+		letter-spacing: 0.08em
+		font-size: 24px
+		line-height: 30px
+		display: block
+		text-align: center
+		padding-top: 84px
+		margin-bottom: 35px
+		+breakpoint(767px)
+			padding-top: 40px
+			margin-bottom: 20px
+	.seller-item
+		max-width: 1020px
+		width: 100%
+		display: block
+		margin: auto
+		// +pie-clearfix
+	.seller-item-l-logo
+		background: #fff
+		font-size: 0
+		line-height: 0
+		height: 190px
+		width: 215/655*100%
+		text-align: center
+		vertical-align: middle
+		padding: 15px
+		+box-sizing(border-box)
+		display: inline-block
+		+breakpoint(767px)
+			width: 100%
+			display: block
+			
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			width: 0
+			height: 100%
+		img
+			display: inline-block
+			vertical-align: middle
+			
+	.Luxury
+		display: block
+		font-size: 20px
+		color: #262626
+	.Premium-seller
+		display: inline-block
+		padding: 8px 8px 4px
+		margin-right: 15px
+	.Trusted-seller
+		display: inline-block
+		padding: 8px 8px 4px
+	.seller-item-l
+		float: left 
+		width: 665/1020*100%
+		padding: 20px
+		box-sizing: border-box
+		min-height: 230px
+		background: #fffdf9
+		+breakpoint(767px)
+			float: none
+			display: block
+			width: 100%
+	.seller-item-l-text
+		width: 390/655*100%
+		display: inline-block
+		vertical-align: middle
+		padding-left: 25px
+		box-sizing: border-box
+		+breakpoint(767px)
+			padding-left: 0px
+			width: 100%
+			margin-top: 20px
+			display: block
+		
+	.seller-item-r
+		float: right
+		min-height: 230px
+		width: 355/1020*100%
+		background: #feb
+		box-sizing: border-box
+		padding: 34px 38px 10px
+		+breakpoint(767px)
+			float: none
+			display: block
+			width: 100%
+		h5 
+			font-size: 13px
+			line-height: 1
+			color: #766c50
+		.seller-item-r-text
+			font-size: 14px
+			line-height: 1.5
+			color: #000
+			margin-bottom: 15px
+			display: block
+			+breakpoint(1150px)
+				font-size: 13px
+		.map-pin
+			margin-bottom: 7px
+			&:before
+				+font-icon("map-pin")
+				color: #766c50
+				margin-right: 10px
+		.phone
+			margin-bottom: 7px
+			&:before
+				+font-icon("telephone")
+				color: #766c50
+				margin-right: 10px
+	.we-speak
+		margin-top: 20px
+		margin-bottom: 24px
+		p 
+			display: inline-block
+			color: #595959
+			font-size: 14px
+			line-height: 1
+	.more-information
+		font-size: 16px
+		line-height: 1
+		+breakpoint(767px)
+			display: none
+	.we-speak-img
+		margin-left: 12px
+		border: 1px solid #dededd
+		display: inline-block
+		// +breakpoint(767px)
+			// padding-left: 8px
+		img 
+			display: block
+			margin: 1px
+	.swiper-slide
+		border-top: 1px solid #f1f1f1
+		border-right: 1px solid #f1f1f1
+		text-align: center
+		box-sizing: border-box
+		padding: 27px 40px
+		min-height: 295px
+		.title
+			font-size: 14px
+			color: #393939
+			line-height: 20px
+			margin: 15px 0px
+			+transition(0.3s)
+		.price
+			color: #393939
+			font-size: 18px
+			font-weight: bold
+			+transition(0.3s)
+	.swiper-pagination
+		position: static
+		border-top: 2px solid #f1f1f1
+		padding: 25px 0px 19px
+		box-sizing: border-box
+		.swiper-pagination-bullet
+			background: #b0b0b0
+			width: 12px
+			height: 12px
+			margin: 0 10px
+		.swiper-pagination-bullet-active
+			background: #b95991
+	.swiper-button-prev, .swiper-button-next
+		width: 65px
+		height: 60px
+		bottom: 0
+		top: auto
+		margin-top: 0
+		text-align: center
+		background-image: none
+		+transition(0.3s)
+		&:before
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			width: 0
+			content: ""
+		&:after
+			+font-icon("arrow")
+			display: inline-block
+			font-size: 14px
+			color: #a6a6a6
+			vertical-align: middle
+			+transition(0.3s)
+			line-height: 15px
+		&:hover
+			background: #b24484
+			+box-shadow(0px 1px 33px 0px rgba(95,80,89,0.25))
+			&:after
+				color: #fff
+	.swiper-button-prev
+		left: 0
+		border-right: 1px solid #f1f1f1
+		&:after
+			transform: rotate(180deg)
+			// line-height: 10px
+	.swiper-button-next
+		border-left: 1px solid #f1f1f1
+		right: 0
+			
+.fixed-content-menu
+	.content-menu
+		position: fixed
+		top: 52px
+		left: 0
+		right: 0
+		width: 100%
+		margin: 0 auto
+		z-index: 20
+		// text-align: center
+		background: #fff
+		padding: 0
+		border: none
+		+box-shadow(0px 8px 13px 0px rgba(95, 80, 89, 0.05))
+		+breakpoint(1180px)
+			top: 50px
+		// &:before
+		// 	content: ""
+		// 	display: block
+		// 	position: fixed
+		// 	top: 50px
+		// 	background: #fff
+		// 	z-index: 19
+		// 	width: 500%
+		// 	left: -2000px
+		// 	height: 51px
+		li 
+			margin: 0
+			&.active
+				a 
+					color: #a72a73
+					border-bottom: 2px solid #a72a73
+					&:before
+						color: #a72a73
+		a
+			border: none
+			position: relative		
+			z-index: 21
+			+transition(border 0s)
+			padding: 18px 40px 12px
+			display: inline-block
+			&:hover
+				color: #a72a73
+				// border-bottom: 2px solid #a72a73
+				&:before
+					color: #a72a73
+			
+	.header-bottom
+		+box-shadow(0px 1px 13px 0px rgba(95, 80, 89, 0))
+			
+.seller-watch
+	.swiper-slide
+		position: relative
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			height: 100%
+			width: 100%
+			background: rgba(#b14785, 0.85)
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			z-index: 3
+			+opacity(0)
+			+transition(opacity 0.5s)
+		&:hover
+			&:before
+				+opacity(1)
+				z-index: 1
+			.title
+				color: #fff
+				position: relative
+				z-index: 1
+				
+			.price
+				color: #fff
+				position: relative
+				z-index: 2
+			.swiper-skide-img
+				+transition(0.3s)
+				filter: blur(2px)
+			.fav
+				+transition(0)
+				z-index: 1
+				+opacity(3)
+			.country
+				background: rgba(#393939, 0.35)
+				color: #fff
+				// font-weight: bold
+			.top 
+				background: rgba(#393939, 0.35)
+				color: #fff
+			+breakpoint(1023px)
+				&:before
+					+opacity(0)
+					z-index: -1
+				.swiper-skide-img
+					filter: blur(0)
+				.title
+					color: #393939
+				.price
+					color: #393939
+				.country
+					background: transparent
+					color: #393939
+				.top 
+					background: #393939
+		.top 
+			text-transform: uppercase
+			padding: 8px 7px 4px
+			background: #393939
+			color: #fff 
+			font-size: 11px
+			line-height: 12px
+			z-index: 2
+			position: absolute
+			left: 20px
+			top: 15px
+			+border-radius(3px)
+			font-weight: bold
+			+transition(0.3s)
+			
+		.country
+			position: absolute
+			right: 20px
+			z-index: 2
+			top: 15px
+			// font-weight: bold
+			
+			// background: #f5f5f5
+			+border-radius(3px)
+			color: #30242b
+			font-size: 12px
+			line-height: 1
+			text-transform: uppercase
+			padding: 6px 10px 4px
+			+transition(0.3s)
+			img 
+				margin-right: 10px
+				display: inline-block
+				height: 11px
+				width: 14px
+		.fav
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			height: 100%
+			width: 100%
+			display: inline-block
+			+opacity(0)
+			z-index: -3
+			+transition(0s)
+			outline: none
+			// width: 170px
+			// vertical-align: top
+			// height: 170px
+			text-align: center
+			// &:before
+			// 	content: ""
+			// 	display: inline-block
+			// 	vertical-align: middle
+			// 	height: 100%
+			// 	width: 0
+			// transform: scale(0)
+			+breakpoint(1180px)
+				z-index: 1
+				+opacity(1)
+				text-align: right
+				
+
+			a 
+				display: inline-block
+				// vertical-align: middle
+				margin-top: 140px
+				// margin-bottom: 50px
+				cursor: pointer
+				&:before
+					+font-icon("favorite")
+					background: rgba(#fff, 0.2)
+					+border-radius(100%)
+					padding: 17px 16px 11px
+					font-size: 18px
+					line-height: 22px
+					color: #fff
+					+box-shadow(0px 6px 10px 0px rgba(0,0,0,0.15))
+					+transition(background 0.3s)
+					// +transition(1s)
+
+				&.active
+					// +transition(1s)
+					// transform: scale(1)
+					&:before
+						background: #fff
+						color: #b14785
+						// +transition(1s)
+						// transform: scale(1)
+						// +transition(color 1s)
+						// +transition(font-size 0.1s, background 0.3s)
+						// +opacity(1)
+					&:hover
+						// margin-top: 138px
+						// &:before
+							// +opacity(0)
+						&:before
+							+font-icon("cancel")
+							+transition(opacity 1s)
+							background: #fff
+							font-size: 14px
+							padding: 19px 18px 13px
+							// padding: 17px 18px 14px
+							// font-size: 14px
+							color: #b14785
+							// transform: scale(1)
+							// +opacity(1)
+							// +transition(font-size 0.3s, background 0.3s)
+				&:hover
+					&:before
+						background: rgba(#fff, 0.4)
+				+breakpoint(1023px)
+					margin-top: 65px
+					margin-right: 25px
+					&:before
+						background: #ba5991
+						+border-radius(100%)
+						padding: 17px 16px 10px
+						font-size: 18px
+						line-height: 22px
+						color: #dd8ebc
+						// +box-shadow(0px 0px 10px 0px rgba(186,89,145,0.71))
+					&.active
+						&:before
+							// background: #fff
+							color: #fff
+							background: #ba5991
+							// +transition(0.3s)
+						&:hover
+							// margin-top: 138px
+							&:before
+								color: #fff
+								background: #ba5991
+								// background: #fff
+								// padding: 17px 18px 14px
+								// font-size: 14px
+								font-size: 14px
+								padding: 19px 18px 12px
+								// color: #b14785
+								// +transition(0.3s)
+					&:hover
+						&:before
+							background: #c9669f
+							color: #e69cc7
+
+
+		
+				
+
+
+
+
+
+
+
+
+
+

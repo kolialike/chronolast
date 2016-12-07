@@ -1,0 +1,337 @@
+.watches
+	+pie-clearfix
+	font-size: 0
+	line-height: 0
+	margin-bottom: 60px
+.watches-navigation-content
+	+opacity(0)
+	max-height: 0
+	overflow: hidden
+	+transition(0.3s)
+	&.active
+		+opacity(1)
+		max-height: 5000px
+
+.watches-l
+	width: 800/1180*100%
+	background: #fff
+	+box-shadow(0px 4px 35px -3px rgba(0, 0, 0, 0.15))
+	float: left
+	padding: 45px 55px 40px
+	+box-sizing(border-box)
+	.newinp-block
+		display: block
+		margin-right: 0
+		width: 100%
+	h3 
+		color: #30242b
+		display: block
+		font-size: 30px
+		line-height: 1
+		text-transform: uppercase
+		margin-bottom: 20px
+	.watches-l-info 
+		color: #696969
+		line-height: 22px
+		font-size: 15px
+		display: block
+		
+	h4 
+		color: #474c55
+		font-size: 24px
+		line-height: 1
+		display: block
+		margin: 0 -55px 30px
+		padding: 45px 55px 15px
+		border-bottom: 2px solid #e4e4e6
+		text-align: justify
+		&:before
+			display: inline-block
+			vertical-align: middle
+			font-size: 20px
+			color: #474c55
+			line-height: 1
+			margin-right: 10px
+			margin-left: 1px
+		&>div
+			font-size: 0
+			line-height: 0
+			&:after
+				content: ""
+				display: inline-block
+				text-align: justify
+				width: 100%
+				height: 0
+		p
+			color: #646e80
+			font-size: 18px
+			line-height: 1
+			display: inline-block
+			vertical-align: top
+			padding: 18px 10px
+			position: relative
+			cursor: pointer
+			&:after
+				content: ""
+				display: block
+				width: 0%
+				+transition(0.3s)
+				position: absolute
+				bottom: -2px
+				background: #ba5991
+				height: 2px
+				left: 0
+			&:before
+				color: #646e80
+				font-size: 16px
+				margin-right: 10px
+				display: inline-block
+				vertical-align: middle
+			&.active
+				color: #ba5991
+				&:before
+					color: #ba5991
+				&:after
+					width: 100%
+	.basic-info
+		&:before
+			+font-icon("circle-transparent")
+	.caliber
+		&:before
+			+font-icon("tool")
+	.case
+		&:before
+			+font-icon("coint")
+	.braslet
+		&:before
+			+font-icon("belt-buckle")
+	.function
+		&:before
+			+font-icon("plus")
+	.others
+		&:before
+			+font-icon("dotted")
+	.photo
+		&:before
+			+font-icon("camera")
+	.description
+		&:before
+			+font-icon("comment")
+	.adv-search-tabs-item
+		padding: 0
+		border-top: 0
+	.watches-tabs
+		padding: 0 55px
+	// .select
+	// 	p 
+	// 		color: #5f535b
+	// 		font-size: 13px
+	// 		// font-weight: 600
+	// 		line-height: 1
+	// 		padding-left: 20px
+	// 		margin-bottom: 8px
+	.watches-tabs-content
+
+	.watches-tabs-content-item
+		+transition(0.3s)
+		+opacity(0)
+		max-height: 0
+		overflow: hidden
+		&.active
+			+opacity(1)
+			max-height: 3000px
+	.photo-content
+		color: #595d64
+		&>p 
+			font-size: 16px
+			display: block
+			line-height: 1
+			margin-bottom: 10px
+		&>span
+			font-size: 14px
+			line-height: 1
+			margin-bottom: 30px
+			display: block
+			
+
+	.photo-img
+		margin-left: -20px
+		+pie-clearfix
+		.photo-img-item
+			position: relative
+			width: 100px
+			height: 100px
+			+box-sizing(border-box)
+			border: 2px dashed #b1b6bf
+			+border-radius(6px)
+			margin-left: 20px
+			float: left
+			margin-bottom: 20px
+			text-align: center
+			+transition(0.3s)
+			+box-shadow(0px 0px 10px 0px rgba(57,57,57,0.1))
+			&:hover
+				border-color: #475368
+				&:before
+					color: #475368
+			&.active
+				border: 1px solid #ebebeb
+				&:before
+					+font-icon("cancel")
+					+opacity(0)
+					color: #fff
+				&:hover
+					border: 1px solid #7c5e6f
+					background: rgba(#ba5991, 0.7)
+					&:before
+						+opacity(1)
+						z-index: 1
+			&:first-child
+				width: 210px
+				height: 220px
+				margin-bottom: 50px
+			&:before
+				+font-icon("plus-2")
+				display: inline-block
+				vertical-align: middle
+				font-size: 21px
+				color: #939aa6
+				line-height: 1
+				+transition(0.3s)
+			&:after
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				height: 100%
+				width: 0
+			span
+				color: #84868b
+				font-size: 14px
+				line-height: 1
+				position: absolute
+				bottom: -45px
+				right: 0
+				left: 0
+			input
+				position: absolute
+				+opacity(0)
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				width: 100%
+				height: 100%
+	.description-content
+		label
+			p 
+				font-size: 16px
+				color: #595d64
+				line-height: 1
+				display: block
+				margin-bottom: 35px
+				margin-left: 7px
+			textarea
+				padding: 10px 15px
+				+box-sizing(border-box)
+				font-family: 'Myriad Pro', Arial, sans-serif
+				display: block
+				width: 100%
+				font-size: 15px
+				line-height: 1
+				color: #595d64
+				resize: none
+				border: 1px solid #f2f0f1
+		.description-back
+			border-top: 2px solid #f6f6f6
+			+pie-clearfix
+			padding-top: 40px
+			margin-top: 55px
+			a 
+				color: #696e77
+				font-size: 16px
+				float: left
+				line-height: 1
+				margin-top: 19px
+				&:before
+					+font-icon("arrow")
+					font-size: 12px
+					line-height: 10px
+					color: #939aa6
+					transform: rotate(180deg)
+					display: inline-block
+					vertical-align: top
+					margin-right: 10px
+			input[type="submit"]
+				color: #fff
+				font-size: 16px
+				display: block
+				width: 200px
+				text-align: center
+				line-height: 1
+				text-transform: uppercase
+				background: #b4337f
+				border: none
+				padding: 16px 10px 13px
+				+box-sizing(border-box)
+				+border-radius(4px)
+				letter-spacing: 0.06em
+				margin: 0 auto 0px
+				float: right
+				&:hover
+					background: #bf428c
+				+breakpoint(767px)
+					display: block
+					
+					width: 100%
+.watches-r
+	float: right
+	width: 380/1180*100%
+	.watches-navigation
+		.watches-navigation-step
+			background: #f2f4f6
+			padding: 20px 30px
+			+box-sizing(border-box)
+			margin-bottom: 30px
+			&.active
+				background: #474c55
+				h3 
+					color: #fff
+				p 
+					color: #fff
+			h3
+				color: #474c55
+				font-size: 24px
+				line-height: 1
+				margin-bottom: 12px
+				font-weight: bold
+				text-transform: uppercase
+				
+			p 
+				color: #474c55
+				font-size: 14px
+				line-height: 1
+	.watches-eror
+		p 
+			font-size: 16px
+			line-height: 1
+			display: block
+		span 
+			font-size: 14px
+			line-height: 1
+			display: block
+		.error
+
+		.success
+
+		.attention
+
+
+
+
+
+
+
+
+
+
+

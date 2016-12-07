@@ -1,0 +1,687 @@
+#header
+	+pie-clearfix
+	height: 192px
+	+breakpoint(767px)
+		height: 276px
+.fixed-header
+	.header-bottom
+		position: fixed !important
+		left: 0
+		right: 0
+		top: 0
+		z-index: 21
+		// background: #f1f0f0 !important
+		+breakpoint(1180px)
+			text-align: center
+			
+		.bottom-logo
+			display: inline-block
+			vertical-align: middle
+			float: left
+			transform: scale(1) rotate(0deg)
+			+opacity(1)
+			+breakpoint(1180px)
+				float: none
+		// .header-bottom .header-bottom-l li
+	.mobile-menu
+		position: fixed !important
+		top: 50px !important
+	.MyChronoCash-item
+		position: fixed
+		top: 34px !important
+		
+.bottom-logo
+	transform: scale(0) rotate(-180deg)
+	+opacity(0)
+	margin-top: 10px
+	margin-left: 20px
+	+transition(transform 0.3s)
+	+breakpoint(1180px)
+		margin-left: 0
+.header-top
+	background: #30242b
+	padding: 30px 0px 27px
+	+breakpoint(767px)
+		text-align: center
+		
+	.logo
+		display: inline-block
+		vertical-align: bottom
+	.search
+		position: relative
+		display: inline-block
+		vertical-align: bottom
+		width: 491/1180*100%
+		margin: 6.5px 0px
+		font-size: 0
+		line-height: 0
+		margin-left: 42px
+		+breakpoint(1180px)
+			float: right
+			margin: 19.5px 0
+		+breakpoint(767px)
+			display: block
+			float: none
+			width: 100%
+	input[type="search"]
+		border: none
+		outline: none
+		height: 45px
+		width: 395/491*100%
+		padding: 16px 14px 15px 45px
+		padding-right: 30px
+		+box-sizing(border-box)
+		background-color: #fff
+		font-size: 13px
+		color: #30242b
+		line-height: 15px
+		+border-radius(4px 0px 0px 4px)
+		+transition(0.2)
+		vertical-align: middle
+		background-image: image-url("search.png") 
+		background-repeat: no-repeat
+		background-position: 15px 16px
+		+breakpoint(767px)
+			background-position: -999px -999px
+			padding: 16px 14px 15px
+			width: 380/491*100%
+		&:focus
+			+transition(0.2)
+			background-color: #fbfbfb
+			+placeholder
+				+opacity(0)
+		+placeholder
+			font-size: 13px
+			color: #30242b
+			line-height: 15px
+			+opacity(0.7)
+			+transition(0.5s)
+	
+			
+	.search-submit
+		// position: absolute
+		// right: 0
+		// top: 0
+		
+		display: inline-block
+		vertical-align: middle
+		margin-left: -1.5px
+		width: 95/491*100%
+		+breakpoint(767px)
+			width: 110/491*100%
+		&:before
+			+font-icon("search-new")
+			position: absolute
+			color: #fff
+			right: 0
+			top: 12px
+			font-size: 16px
+			left: 0
+			bottom: 0
+			z-index: 1
+			pointer-events: none
+		input[type="submit"]
+			position: relative
+			border: none
+			+border-radius(0px 4px 4px 0px)
+			height: 45px
+			width: 100%
+			background: #b4337f
+			padding: 12px 0px 15px
+			outline: none
+			// background: transparent
+			// height: 100%
+			// width: 30px
+			cursor: pointer
+			color: #fff
+			font-size: 15px
+			line-height: 20px
+			+transition(0.3s)
+			&:hover
+				background: #bf428c
+			&:active
+				background: #bf428c
+	// .search-submit2
+	// 	display: none
+	// 	+breakpoint(767px)
+	// 		display: inline-block
+	// 		width: 110/491*100%
+	// 		background-image: image-url("search.png") 
+	// 		background-repeat: no-repeat
+	// 		background-position: center center
+	
+
+
+	.contact-us
+		float: right
+		margin-right: 45px
+		margin-top: 49px
+		font-size: 14px
+		line-height: 14px
+		color: #92848c
+		border-bottom: 1px dotted rgba(#92848c, 0.45)
+		+breakpoint(1180px)
+			display: none
+		&:hover
+			color: #fff
+			border-bottom: 1px dotted rgba(#92848c, 0)
+
+.language
+	float: right
+	margin-top: 32px
+	padding: 12px 20px 10px
+	+border-radius(4px)
+	background: #392b33
+	cursor: pointer
+	+transition(0.3s)
+	+breakpoint(1180px)
+		display: none
+	+breakpoint(767px)
+		+border-radius(0)
+	&:hover
+		background: #44343d
+		a
+			&.active
+				background: rgba(#ffffff, 0.15)
+	p 
+		display: inline-block
+		padding: 6px 8px 3px
+		+border-radius(4px)
+		line-height: 14px
+		font-size: 14px
+		text-transform: uppercase
+		color: #fff
+		margin-right: 10px
+		font-weight: bold
+		
+		// font-weight: bold
+		// &:hover
+			// font-weight: 400
+			// background: rgba(#4f444a, 0.57)
+		&:last-child
+			margin-right: 0
+		&.active
+			background: rgba(#4f444a, 0.57)
+.header-bottom
+	+pie-clearfix
+	background: #f1f0f0
+	+box-shadow(0px 1px 13px 0px rgba(95,80,89,0.3))
+	position: relative
+	
+	.header-bottom-l
+		float: left
+		font-size: 0
+		line-height: 0
+		+breakpoint(1180px)
+			display: none
+		li 
+			display: inline-block
+			margin: 13px 0px 8px
+			padding: 6px 25px 1px
+			border-right: 1px solid rgba(#bfbfbf, 0.5)
+			&:last-child
+				border: none
+		a 
+			font-size: 16px
+			line-height: 20px
+			color: #5e4d57
+			display: inline-block
+			text-transform: uppercase
+			&:hover
+				color: #241a20
+
+	.header-bottom-r
+		float: right
+		font-size: 0
+		line-height: 0
+		a
+			display: inline-block
+			color: #30242b
+			font-size: 14px
+			line-height: 16px
+			letter-spacing: 0.08em
+		.MyChronoCash-container
+			position: relative
+			display: inline-block
+			vertical-align: top
+			padding: 0 30px
+			margin-top: 19px
+			+breakpoint(1180px)
+				display: none
+			&.open
+				.MyChronoCash
+					&:after
+						transform: rotate(270deg)
+						top: 0px
+						right: 28px
+				.MyChronoCash-item
+					+opacity(1)
+					padding: 20px					
+					max-height: 500px
+		.MyChronoCash
+			color: #b4337f
+			// position: relative
+			padding-right: 15px
+			&:before
+				+font-icon("people")
+				display: inline-block
+				vertical-align: baseline
+				margin-right: 10px
+				color: rgba(#ba5991, 0.3)
+				font-size: 16px
+			&:after
+				display: inline-block
+				position: absolute
+				right: 28px
+				top: 2px
+				font-size: 9px
+				transform: rotate(90deg)
+				// width: 5px
+				// height: 5px
+				// border: 2px solid
+				// border-color:  transparent #bb508c #bb508c  transparent
+				+font-icon("arrow")
+				margin-left: 10px
+				+transition(0.3s)
+		.MyChronoCash-item
+			position: absolute
+			top: 32px
+			left: 0
+			right: 0
+			width: 100%
+			max-height: 0
+			padding: 0 20px
+			+opacity(0)
+			overflow: hidden
+			+transition(0.5s)
+			box-sizing: border-box
+			z-index: 2
+			background: #fff
+			+box-shadow(0px 1px 5px 0px rgba(95,80,89,0.45))
+			a 
+				display: block
+				border-bottom: 1px solid rgba(#ececec, 0.5)
+				color: #61565c
+				padding: 13px 10px 10px
+				font-size: 12px
+				line-height: 14px
+				&:before
+					display: inline-block
+					margin-right: 12px
+					color: #61565c
+					font-size: 13px
+					vertical-align: middle
+				&:hover
+					color: #b5528c
+					border-bottom: 1px solid rgba(#b5528c, 0.5)
+					&:before
+						color: #b5528c
+			.list
+				&:before
+					+font-icon("list")
+					font-size: 15px
+			.diskette
+				&:before
+					+font-icon("diskette")
+			.eye
+				&:before
+					+font-icon("eye")
+					font-size: 17px
+			.arrow-back
+				&:before
+					+font-icon("arrow-back")
+					font-size: 17px
+		.fav
+			// margin-left: 38px
+			padding: 20px 20px 16px
+			background: rgba(#e0e0e0, 0.5)
+			color: #3e3139
+			font-size: 15px
+			line-height: 1
+			letter-spacing: 0.08em
+			outline: none
+			p 
+				display: inline-block
+			+breakpoint(1180px)
+				padding-bottom: 14px
+				// text-indent: -999999px
+				p 
+					display: none 
+			&:hover
+				background: rgba(#e0e0e0, 0.7)
+			&:before
+				+font-icon("favorite")
+				display: inline-block
+				vertical-align: baseline
+				margin-right: 10px
+				color: #cacaca
+				font-size: 13px
+			span 
+				position: relative
+				color: #ba5991
+				font-weight: bold
+				font-size: 14px
+				line-height: 1
+				margin-left: 4px
+				padding-left: 9px
+				letter-spacing: 0.04em
+				display: inline-block
+				&:before
+					content: ""
+					position: absolute
+					left: 0
+					top: -3px
+					width: 1px
+					height: 17.5px
+					border-left: 1px solid #d0d0d0
+				+breakpoint(1180px)
+					margin-left: 0
+					padding-left: 0
+					&:before
+						display: none
+
+	
+.mobile-menu
+	position: absolute
+	width: 100%
+	height: 100%
+	right: 20px
+	z-index: 40
+	left: -100%
+	top: 192px
+	background: rgba(#000, 0.5)
+	+opacity(0)
+	// padding-top: 50px
+	+box-sizing(border-box)
+	overflow: auto
+	+breakpoint(767px)
+		top: 276px
+	.mobile-menu-item
+		float: left
+		background: #f1f0f0
+		height: 100%
+		width: 100%
+		min-width: 320px
+		overflow: auto
+		+box-sizing(border-box)
+		padding-bottom: 30px
+		// padding: 60px 20px 0px
+		li 
+			display: block
+			a 
+				font-size: 18px
+				line-height: 20px
+				color: #30242b
+				text-transform: uppercase
+				display: block
+				padding: 10px 20px
+				border-top: 1px solid rgba(#fff, 0.3)
+				border-bottom: 1px solid rgba(#fff, 0.3)
+				margin-top: -1px
+				&:hover
+					color: #503e49
+				&:active
+					color: #503e49	
+	.menu-burger
+		position: relative
+		display: block		
+		float: right
+		margin: 20px
+		margin-right: 50px
+	.home
+		float: left
+		margin: 13px 20px
+		&:before
+			+font-icon("home")
+			font-size: 34px
+			color: #fff
+			display: inline-block
+			vertical-align: middle
+	.language
+		display: block
+		float: none
+		margin: 0px
+		width: 100%
+		text-align: center
+		padding: 10px 0
+		// a 
+		// 	display: inline-block
+		// 	padding: 6px 8px 3px
+		// 	+border-radius(4px)
+		// 	line-height: 14px
+		// 	font-size: 14px
+		// 	text-transform: uppercase
+		// 	color: #393939
+		// 	margin-right: 10px
+		// 	font-weight: bold
+			
+		// 	// font-weight: bold
+		// 	// &:hover
+		// 		// font-weight: 400
+		// 		// background: rgba(#4f444a, 0.57)
+		// 	&:last-child
+		// 		margin-right: 0
+		// 	&.active
+		// 		background: rgba(#4f444a, 0.57)
+
+		
+
+.menu-burger
+	display: none
+	+transition(0.3s)
+	// display: inline-block
+	position: relative
+	float: left
+	cursor: pointer
+	z-index: 90
+	width: 30px
+	height: 20px
+	margin-top: 17px
+	margin-left: 0px
+	margin-right: 50px
+	+breakpoint(1180px)
+		display: inline-block
+	// +breakpoint(550px)
+		// margin-top: 46px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		background: #30242b
+		height: 4px
+		+transition(0.2s)
+		+backface-visibility(hidden)
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		display: block
+		width: 100%
+		background: #30242b
+		height: 4px
+		+transition(0.2s)
+		+backface-visibility(hidden)
+	.menu-burger-item
+		position: absolute
+		display: block
+		width: 100%
+		background: #30242b
+		+transition(0.3s)
+		height: 4px
+		top: 8px
+		left: 0
+
+
+.mobile-menu-open
+	+transition(0.3s)
+	#header
+		background: #20222e
+	.mobile-menu
+		// +transition(top 0s, 0.3s)
+		display: block
+		// top: 0
+		left: 0
+		+opacity(1)
+		a 
+			font-size: 16px
+	.menu-burger
+		+transition(0.3s)
+		&:before
+			+rotate(45deg)
+			top: 8px
+		&:after
+			+rotate(-45deg)
+			bottom: 8px
+		.menu-burger-item
+			// +transition(0.3s)
+			// +rotate(135deg)
+			// margin-bottom: -3px
+			// margin-top: 3px
+			+opacity(0)
+
+#id-modal-1
+	.datamodal-container
+		+box-sizing(border-box)
+		padding: 45px
+		+breakpoint(767px)
+			padding: 25px 20px
+		.select
+			// border-bottom: 2px solid #f1f1f1
+			// margin-bottom: 20px
+			// &:focus
+				// border-color: #e0e0e0
+			// select
+				// font-size: 13px
+				// border: none
+				// text-transform: uppercase
+				// color: #b7b7b7
+				// padding: 15px 8px 11px
+				// height: 40px
+
+		h4
+			color: #262626
+			font-size: 20px
+			text-transform: uppercase
+			font-weight: bold
+			padding-right: 40px
+			position: relative
+			display: inline-block
+			padding-bottom: 15px
+			letter-spacing: 0.06em
+			margin-bottom: 35px
+			&:after
+				height: 2px
+				content: ""
+				width: 100%
+				display: block
+				position: absolute
+				bottom: 0
+				background: #262626
+		.newinp
+			margin-bottom: 35px
+			margin-top: 20px
+			&:nth-last-of-type(1)
+				// margin-bottom: 25px
+				// &>input
+			&>input
+				border-color: #f1f1f1
+				color: #30242b
+				font-size: 14px
+				// margin-bottom: 40px
+				border: 1px solid #f2f0f1 !important
+				+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.02))
+				padding-left: 20px !important
+				+placeholder 
+					color: #8e8a8c !important
+				&:focus
+					border: 1px solid #e0d9dd !important
+					+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.03))
+				&:focus ~ span,
+				&.notempty ~ span
+					// color: #8f8f8f
+					top: -21px
+					font-size: 13px
+					color: #5f535b
+					text-transform: capitalize
+					// font-weight: 600
+			&>span
+				// color: #b7b7b7
+				top: -21px
+				font-size: 13px
+				left: 20px !important
+				color: #5f535b
+				text-transform: capitalize
+				// font-weight: 600
+		input[type="submit"]
+			color: #fff
+			font-size: 16px
+			float: right
+			width: 200px
+			text-align: center
+			line-height: 1
+			text-transform: uppercase
+			background: #b4337f
+			border: none
+			padding: 16px 10px 13px
+			+box-sizing(border-box)
+			+border-radius(4px)
+			letter-spacing: 0.06em
+			margin-top: 25px
+			+transition(0.3s)
+			+breakpoint(500px)
+				display: block
+				
+				width: 100%
+			&:hover
+				background: #bf428c
+		.cancel
+			font-size: 16px
+			color: #9a9a9a
+			text-transform: uppercase
+			float: left
+			margin-top: 42px
+			line-height: 1
+			&:hover
+				color: #b4337f
+			+breakpoint(500px)
+				margin-top: 8px
+				display: block
+				text-align: center
+				width: 100%
+				
+		.modalclose
+			display: inline-block
+			position: absolute
+			right: 30px
+			top: 48px
+			cursor: pointer
+			+breakpoint(767px)
+				top: 25px
+				right: 20px
+			&:before
+				display: inline-block
+				font-size: 14px
+				line-height: 1
+				+font-icon("cancel")
+				color: #9b999a
+
+
+.select
+	// display: none
+	// border: 1px solid #f2f0f1 !important
+	// +box-shadow(0px 2px 8px 0px rgba(75,26,54,0.05))
+	margin-bottom: 40px !important
+	p 
+		color: #5f535b
+		font-size: 13px
+		// font-weight: 600
+		line-height: 1
+		padding-left: 20px
+		margin-bottom: 8px
+	.select2-dropdown
+		+box-shadow(0px 2px 10px 0px rgba(57,57,57,0.31))
+
