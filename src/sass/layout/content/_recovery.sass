@@ -129,9 +129,12 @@
 		float: left
 		+breakpoint(1023px)
 			margin-top: 30px
+			display: block
+			text-align: center
+			float: none
 		+breakpoint(767px)
 			float: none
-			display: inline-block
+			// display: inline-block
 		&:hover
 			color: #c23e8c	
 		&:before
@@ -177,7 +180,7 @@
 		padding-left: 10px	
 		font-size: 14px
 		color: #393939	
-		width: 92%	
+		// width: 100%	
 		padding-top: 2px
 	label input:checked + .checkbox
 		background-position: -17px 0			

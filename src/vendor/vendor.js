@@ -2,3 +2,4 @@
 //= swiper.jquery.umd.min.js
 //= jquery-ui.js
 //= select2.js
+//= jquery.datetimepicker.min.js

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Base</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width,initial-scale=0.6,maximum-scale=1,user-scalable=no,minimal-ui">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 	<link rel="stylesheet" type="text/css" href="../css/screen.css" />
 	<script type="text/javascript" src="../js/vendor.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
@@ -137,13 +137,13 @@
 					<div class="watches-l">
 
 
-						<div class="watches-navigation-content">
+						<div class="watches-navigation-content active">
 							<h3>Create a new ad</h3>
 							<p class="watches-l-info">Do not create ads for counterfeit, replica, or dummy watches. We're required to report such cases to the responsible authorities.</p>
 							<h4 class="basic-info">Primary information</h4>
 							<div class="adv-search-tabs-item">
 								<div class="select newinp-block">
-									<p>Ad type</p>
+									<p>Option</p>
 									<select class="select-2" name="" id="">
 										<option value="-">-</option>
 										<option value="1">1</option>
@@ -170,11 +170,501 @@
 									<span>Reference</span>
 								</div>
 							</div>
-							<h4 class="basic-info">Primary information</h4>
+							<h4 class="basic-info select-selling-otions-h4">Select selling options</h4>
+							<div class="select-selling-otions">
+								<div class="select-selling-otions-tabs Auction active"><p><span>W</span>Auction</p></div>
+								<div class="select-selling-otions-tabs Sale"><p><span>V</span>Sale</p></div>
+								<div class="select-selling-otions-tabs Auction-Sale"><p><span>W V</span>Auction + Sale</p></div>
+							</div>
+							<div class="select-selling-otions-tabs-content adv-search-tabs-item">
+								<div class="active">
+									<div class="Auction-step">
+										<div class="item">
+											<h5>Auction</h5>
+											<div class="newinp">
+												<input type="text">
+												<span>Starting price ($)</span>
+											</div>
+											<!-- <span>—</span> -->
+											<div class="newinp">
+												<input type="text">
+												<span>Step price<span class="min">(min 100$)</span></span>
+											</div>
+										</div>
+										<div class="item">
+											<div class="newinp">
+												<input type="text" data-rel="date" placeholder="select a date">
+												<span>Beginning</span>
+												<p class="calendar"></p>
+											</div>
+											<!-- <span>—</span> -->
+											<div class="newinp">
+												<input type="text" data-rel="date" placeholder="select a date">
+												<span>Ending </span>
+												<p class="calendar"></p>
+											</div>
+										</div>
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>shipping</strong> options</h4>
+									<div class="select">
+										<p>Do you have delivery service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>payments</strong> options</h4>
+									<div class="select" style="display: none;">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Do you have payments service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>shipping</strong> options</h4>
+									<div class="select" style="display: none;">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Do you have payments service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<input type="submit" value="next step">
+								</div>
+
+								<div>
+									<div class="Auction-step">
+										<div class="item sale-item">
+											<h5>Sale</h5>
+											<div class="newinp">
+												<input type="text">
+												<span>Product price</span>
+											</div>
+										</div>
+										<!-- <div class="item">
+											<div class="newinp">
+												<input type="text" data-rel="date" placeholder="select a date">
+												<span>Beginning</span>
+												<p class="calendar"></p>
+											</div>
+											<span>—</span>
+											<div class="newinp">
+												<input type="text" data-rel="date" placeholder="select a date">
+												<span>Ending </span>
+												<p class="calendar"></p>
+											</div>
+										</div> -->
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>shipping</strong> options</h4>
+									<div class="select">
+										<p>Do you have delivery service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>payments</strong> options</h4>
+									<div class="select" style="display: none;">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Do you have payments service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>shipping</strong> options</h4>
+									<div class="select" style="display: none;">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Do you have payments service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<input type="submit" value="next step">
+								</div>
+
+								<div>
+									<div class="Auction-step">
+
+										<div class="item">
+											<h5>Auction</h5>
+											<div class="newinp">
+												<input type="text">
+												<span>Starting price ($)</span>
+											</div>
+											<!-- <span>—</span> -->
+											<div class="newinp">
+												<input type="text">
+												<span>Step price <span class="min">(min 100$)</span></span>
+											</div>
+										</div>
+										<div class="item">
+											<div class="newinp">
+												<input type="text" data-rel="date" placeholder="select a date">
+												<span>Beginning</span>
+												<p class="calendar"></p>
+											</div>
+											<!-- <span>—</span> -->
+											<div class="newinp">
+												<input type="text" data-rel="date" placeholder="select a date">
+												<span>Ending </span>
+												<p class="calendar"></p>
+											</div>
+										</div>
+										<div class="item sale-item">
+											<h5>Sale</h5>
+											<div class="newinp">
+												<input type="text">
+												<span>Product price</span>
+											</div>
+										</div>
+										<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>shipping</strong> options</h4>
+									<div class="select">
+										<p>Do you have delivery service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>payments</strong> options</h4>
+									<div class="select" style="display: none;">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Do you have payments service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<h4 class="basic-info select-selling-otions-h4 select-option">Select <strong>shipping</strong> options</h4>
+									<div class="select" style="display: none;">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Do you have payments service?</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select select-op-0" style="">
+										<p>Item location</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Material: Case</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Ships to</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<input type="submit" value="next step">
+									</div>
+								</div>
+							</div>
+
 						</div>
 
 
-						<div class="watches-navigation-content active">
+						<div class="watches-navigation-content ">
 							<h3>Create a new ad</h3>
 							<p class="watches-l-info">Do not create ads for counterfeit, replica, or dummy watches. We're required to report such cases to the responsible authorities.</p>
 							<h4 class="basic-info">Basic information</h4>
@@ -232,19 +722,136 @@
 							</div>
 							<h4 class="watches-tabs">
 								<div>
-									<p class="caliber">Caliber</p>
-									<p class="case active">Case</p>
-									<p class="braslet">Bracelet/strap</p>
-									<p class="function">Functions</p>
-									<p class="others">Others</p>
+									<p class="watches-tabs-items caliber">Caliber</p>
+									<p class="watches-tabs-items case active">Case</p>
+									<p class="watches-tabs-items braslet">Bracelet/strap</p>
+									<p class="watches-tabs-items function">Functions</p>
+									<p class="watches-tabs-items others">Others</p>
+								</div>
+								<p class="watches-tabs-p">Ad type</p>
+								<div class="select newinp-block select-selling-otions-select">
+									<div class="arrow"></div>
+									<select name="" id="">
+										<option value="Caliber">Caliber</option>
+										<option value="Case">Case</option>
+										<option value="Bracelet/strap">Bracelet/strap</option>
+										<option value="Functions">Functions</option>
+										<option value="Others">Others</option>
+									</select>
 								</div>
 							</h4>
 							<div class="watches-tabs-content">
-								<div class="watches-tabs-content-item ">1</div>
+								<div class="watches-tabs-content-item ">
+									<div class="adv-search-tabs-item">
+										<div class="newinp">
+											<input type="text">
+											<span>Movement/caliber</span>
+										</div>
+										<div class="newinp">
+											<input type="text">
+											<span>Base caliber</span>
+										</div>
+										<div class="newinp">
+											<input type="text">
+											<span>Power reserve</span>
+										</div>
+										<div class="newinp">
+											<input type="text">
+											<span>Number of jewels</span>
+										</div>
+										<div class="newinp">
+											<input type="text">
+											<span>Frequency</span>
+										</div>
+									</div>
+								</div>
 								<div class="watches-tabs-content-item case-content active">
 									<div class="adv-search-tabs-item">
+										<div class="adv-search-tabs-item-input-l">
+											<div class="newinp">
+												<input type="text">
+												<span>Case diametr (mm)</span>
+											</div>
+											<span>x</span>
+											<div class="newinp">
+												<input type="text">
+												<span></span>
+											</div>
+										</div>
+										<div class="newinp">
+											<input type="text">
+											<span>Thickness (mm)</span>
+										</div>
+										<div class="select">
+											<p>Waterproof</p>
+											<select class="select-2" name="" id="">
+												<option value="-">-</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+										<div class="select">
+											<p>Waterproof</p>
+											<select class="select-2" name="" id="">
+												<option value="-">-</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+										<div class="select">
+											<p>Dial</p>
+											<select class="select-2" name="" id="">
+												<option value="-">-</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+										<div class="select">
+											<p>Dial numerals</p>
+											<select class="select-2" name="" id="">
+												<option value="-">-</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="watches-tabs-content-item ">
+									<div class="select">
+										<p>Waterproof</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Waterproof</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="select">
+										<p>Dial</p>
+										<select class="select-2" name="" id="">
+											<option value="-">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+								</div>
+								<div class="watches-tabs-content-item ">
+									<div class="adv-search-tabs-item">
 										<div class="movement-scope-new">
-											<h5></h5>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Moonphase</span></label>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Minute Repeater</span></label>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Chronograph</span></label>
@@ -254,7 +861,6 @@
 											<label><input type="checkbox"><div class="checkbox"></div><span>Chiming clock</span></label>
 										</div>
 										<div class="movement-scope-new">
-											<h5></h5>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Repeater</span></label>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Tourbillon</span></label>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Date</span></label>
@@ -264,7 +870,6 @@
 											<label><input type="checkbox"><div class="checkbox"></div><span>Annual calendar</span></label>
 										</div>
 										<div class="movement-scope-new">
-											<h5></h5>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Perpetual Calendar</span></label>
 											<label><input type="checkbox"><div class="checkbox"></div><span>Alarm</span></label>
 											<label><input type="checkbox"><div class="checkbox"></div><span>GMT</span></label>
@@ -274,17 +879,36 @@
 										</div>
 									</div>
 								</div>
-								<div class="watches-tabs-content-item ">3</div>
-								<div class="watches-tabs-content-item ">4</div>
-								<div class="watches-tabs-content-item ">5</div>
+								<div class="watches-tabs-content-item ">
+									<div class="adv-search-tabs-item">
+										<div class="movement-scope-new other-movement-scope-new">
+											<label><input type="checkbox"><div class="checkbox"></div><span>Moonphase</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Minute Repeater</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Chronograph</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Double Chronograph</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Flyback</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Panorama-Date</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Chiming clock</span></label>
+										</div>
+										<div class="movement-scope-new other-movement-scope-new">
+											<label><input type="checkbox"><div class="checkbox"></div><span>Repeater</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Tourbillon</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Date</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Weekday</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Month</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Year</span></label>
+											<label><input type="checkbox"><div class="checkbox"></div><span>Annual calendar</span></label>
+										</div>
+									</div>
+								</div>
 							</div>
 							<h4 class="photo">Photo</h4>
 							<div class="photo-content">
-								<p>Before you upload photo you have to read <a href="#" class="link-style">rules about that</a></p>
-								<span>You must to upload at least <strong>5 photo</strong></span>
+								<!-- <p>Before you upload photo you have to read <a href="#" class="link-style">rules about that</a></p> -->
+								<!-- <span>You must to upload at least <strong>5 photo</strong></span> -->
 								<div class="photo-img">
 									<div class="photo-img-item"><input type="file"><span>Tittle photo</span></div>
-									<div class="photo-img-item"><input type="file"></div>
+									<div class="photo-img-item active" style="background: url('../img/clock-img-1.jpg');background-position: center center;background-size: cover;"><input type="file"></div>
 									<div class="photo-img-item"><input type="file"></div>
 									<div class="photo-img-item"><input type="file"></div>
 									<div class="photo-img-item"><input type="file"></div>
@@ -303,33 +927,33 @@
 								</div>
 							</div>
 						</div>
-						<div class="watches-navigation-content"></div>
+						
 				</div>
 					<div class="watches-r">
 						<div class="watches-navigation">
-							<div class="watches-navigation-step">
+							<div class="watches-navigation-step active">
 								<h3>Step 1</h3>
 								<p>Main information</p>
 							</div>
-							<div class="watches-navigation-step active">
+							<div class="watches-navigation-step">
 								<h3>Step 2</h3>
 								<p>Product options</p>
 							</div>
-							<div class="watches-navigation-step">
-								<h3>Step 3</h3>
-								<p>Final</p>
-							</div>
+							
 						</div>
 						<div class="watches-eror">
 							<div class="watches-eror-item error">
+								<div class="watches-eror-item-img"><div class="fav"></div><img src="../img/eror.png" alt=""></div>
 								<p>Error</p>
 								<span>Something went wrong</span>
 							</div>
 							<div class="watches-eror-item success">
+								<div class="watches-eror-item-img"><img src="../img/success.png" alt=""></div>
 								<p>Success</p>
 								<span>Everything awesome</span>
 							</div>
 							<div class="watches-eror-item attention">
+								<div class="watches-eror-item-img"><img src="../img/attention.png" alt=""></div>
 								<p>Attention</p>
 								<span>Check this out</span>
 							</div>

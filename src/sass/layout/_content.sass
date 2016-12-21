@@ -3,6 +3,8 @@
 @import content/recovery
 @import content/advance-search
 @import content/watches
+@import content/contact
+@import content/faq
 
 .main-slider
 	position: relative
@@ -127,7 +129,7 @@
 	font-size: 16px
 	line-height: 1
 	display: block
-	padding: 7px 10px 10px
+	padding: 16px 10px 15px
 	+box-sizing(border-box)
 	text-align: center
 	+border-radius(4px)
@@ -655,7 +657,8 @@
 	.buy-it-now-rose
 		background: #b4337f
 		display: none
-
+		&:hover
+			background: #b32c7a
 	.can-buy-now
 		display: block
 		line-height: 16px
@@ -1035,6 +1038,10 @@
 				color: #a4236e
 			&:before
 				color: #a4236e
+			.services-r-item-text
+				+opacity(1)
+				padding: 25px
+				max-height: 500px
 		&.active
 			h4
 				color: #a4236e
@@ -1050,7 +1057,7 @@
 			line-height: 14px
 			&:before
 				color: #ba5991
-				
+			
 	.world
 		&:before
 			+font-icon("world")
@@ -1588,6 +1595,11 @@
 	.swiper-slide
 		position: relative
 		cursor: pointer
+		// &>a
+		// 	display: block
+		.swiper-skide-img
+			img 
+				height: 218px
 		&:before
 			content: ""
 			position: absolute
@@ -1601,6 +1613,7 @@
 			z-index: 3
 			+opacity(0)
 			+transition(opacity 0.5s)
+			pointer-events: none
 		&:hover
 			&:before
 				+opacity(1)
@@ -1608,7 +1621,7 @@
 			.title
 				color: #fff
 				position: relative
-				z-index: 1
+				z-index: 2
 				
 			.price
 				color: #fff
@@ -1619,7 +1632,7 @@
 				filter: blur(2px)
 			.fav
 				+transition(0)
-				z-index: 1
+				z-index: 2
 				+opacity(3)
 			.country
 				background: rgba(#393939, 0.35)
@@ -1701,6 +1714,7 @@
 			// 	vertical-align: middle
 			// 	height: 100%
 			// 	width: 0
+			pointer-events: none
 			// transform: scale(0)
 			+breakpoint(1180px)
 				z-index: 1
@@ -1708,17 +1722,20 @@
 				text-align: right
 				
 
-			a 
+			.fav-item
 				display: inline-block
 				// vertical-align: middle
 				margin-top: 140px
 				// margin-bottom: 50px
 				cursor: pointer
+				position: relative
+				z-index: 2
+				pointer-events: fill
 				&:before
 					+font-icon("favorite")
 					background: rgba(#fff, 0.2)
 					+border-radius(100%)
-					padding: 17px 16px 11px
+					padding: 15px 16px 13px
 					font-size: 18px
 					line-height: 22px
 					color: #fff
@@ -1746,7 +1763,7 @@
 							+transition(opacity 1s)
 							background: #fff
 							font-size: 14px
-							padding: 19px 18px 13px
+							padding: 17px 18px 14px
 							// padding: 17px 18px 14px
 							// font-size: 14px
 							color: #b14785
@@ -1762,7 +1779,7 @@
 					&:before
 						background: #ba5991
 						+border-radius(100%)
-						padding: 17px 16px 10px
+						padding: 15px 16px 13px
 						font-size: 18px
 						line-height: 22px
 						color: #dd8ebc
@@ -1782,7 +1799,7 @@
 								// padding: 17px 18px 14px
 								// font-size: 14px
 								font-size: 14px
-								padding: 19px 18px 12px
+								padding: 17px 18px 15px
 								// color: #b14785
 								// +transition(0.3s)
 					&:hover

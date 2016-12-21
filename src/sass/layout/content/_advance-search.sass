@@ -96,10 +96,11 @@
 			border: 1px solid #f2f0f1 !important
 			+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.02))
 			padding-left: 20px !important
+			
 			+placeholder 
 				color: #8e8a8c !important
 			&:focus
-				border: 1px solid #e0d9dd !important
+				border: 1px solid #cabfc5 !important
 				+box-shadow(0px 2px 10px 0px rgba(75,26,54,0.03))
 			&:focus ~ span,
 			&.notempty ~ span
@@ -116,6 +117,8 @@
 			left: 20px !important
 			color: #5f535b
 			text-transform: capitalize
+			white-space: nowrap
+			
 			// font-weight: 600
 	label
 		font-size: 14px
@@ -150,9 +153,9 @@
 		width: 33%
 		display: inline-block
 		vertical-align: top
-		padding-right: 20px
+		padding-right: 10px
 		+box-sizing(border-box)
-		+breakpoint(600px)
+		+breakpoint(767px)
 			width: 100%
 			margin-bottom: 20px
 
@@ -164,6 +167,8 @@
 			margin-bottom: 25px
 			+breakpoint(1023px)
 				font-size: 15px
+	.other-movement-scope-new
+		width: 49.9%
 	.select
 		display: inline-block
 		vertical-align: top
@@ -175,31 +180,7 @@
 			display: block
 		&:nth-child(even)
 			margin-right: 0
-	.adv-search-tabs-item-input-l
-		display: inline-block
-		vertical-align: top
-		width: 350/730*100%
-		margin-right: 3.97561%
-		+breakpoint(600px)
-			margin-right: 0
-			width: 100%
-			display: block
-		.newinp
-			width: 42%
-			margin-right: 0
-			display: inline-block
-			vertical-align: top
-			
-		&>span 
-			font-size: 16px
-			color: #8e8a8c
-			display: inline-block
-			line-height: 1
-			vertical-align: top
-			width: 15.3%
-			text-align: center
-			
-			margin: 30px 0% 0px
+	
 	input[type="submit"]
 		color: #fff
 		font-size: 16px
@@ -221,6 +202,31 @@
 			display: block
 			
 			width: 100%
+.adv-search-tabs-item-input-l
+	display: inline-block
+	vertical-align: top
+	width: 350/730*100%
+	margin-right: 3.97561%
+	+breakpoint(600px)
+		margin-right: 0
+		width: 100%
+		display: block
+	.newinp
+		width: 42%
+		margin-right: 0
+		display: inline-block
+		vertical-align: top
+		
+	&>span 
+		font-size: 16px
+		color: #8e8a8c
+		display: inline-block
+		line-height: 1
+		vertical-align: top
+		width: 15.3%
+		text-align: center
+		
+		margin: 30px 0% 0px
 .adv-search-l-item
 	// border-bottom: 2px solid #e4e4e6
 	+box-sizing(border-box)

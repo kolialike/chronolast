@@ -245,14 +245,14 @@
 	&>input
 		width: 100%
 		display: block
-		background: transparent
+		background-color: transparent
 		color: #ded7db
 		font-size: 13px
 		line-height: 1
 		height: 40px
 		position: relative
 		z-index: 2
-		padding: 7px 10px 10px
+		padding: 7px 10px 7px
 		+box-sizing(border-box)
 		border: 0
 		border-bottom: 2px solid #392e35
@@ -278,6 +278,8 @@
 		text-transform: uppercase
 		z-index: 1
 		transition: 0.3s
+		+breakpoint(767px)
+			left: 10px !important
 	
 .addmember .newinp
 	width: 100%
