@@ -1,8 +1,9 @@
-.recovery-content
-	padding: 45px 0
-	+pie-clearfix
-	&:before
-		height: 360px !important
+.main-content
+	&.recovery-content
+		padding: 45px 0
+		+pie-clearfix
+		&:before
+			height: 360px
 .recovery
 	h4
 		
@@ -182,6 +183,9 @@
 		color: #393939	
 		// width: 100%	
 		padding-top: 2px
+		width: 91%
+		+breakpoint(767px)
+			width: 87%
 	label input:checked + .checkbox
 		background-position: -17px 0			
 	label input:checked ~ span
@@ -256,7 +260,7 @@
 	.newinp
 		display: inline-block
 		vertical-align: top
-		width: 315/670*100%
+		width: 310/670*100%
 		margin-right: 5.87561%
 		// margin-bottom: 47px
 		margin-bottom: 35px
@@ -313,7 +317,7 @@
 			background: #bf428c
 		+breakpoint(767px)
 			display: block
-			
+			float: none
 			width: 100%
 .create-new-account-r
 	+breakpoint(767px)

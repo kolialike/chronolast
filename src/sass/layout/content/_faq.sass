@@ -1,0 +1,210 @@
+.faq-content
+	padding-top: 0 !important
+.faq
+	+pie-clearfix
+	+box-shadow(0px 0px 20px 0px rgba(57,57,57,0.1))
+	background: #fff
+	h4 
+		color: #30242b
+		margin-top: 12px
+		font-size: 18px
+		line-height: 1.2
+		display: block
+		margin-bottom: 35px
+		text-transform: uppercase
+	span 
+		font-size: 16px
+		color: #393939
+	+breakpoint(767px)
+		margin-bottom: 20px
+	.faq-l
+		float: left
+		width: 290/1180*100%
+		padding: 50px 20px 45px 55px
+		+box-sizing(border-box)
+		+breakpoint(1023px)
+			padding-left: 20px
+		+breakpoint(767px)
+			display: block
+			float: none
+			width: 100%
+			padding-top: 30px
+			padding-bottom: 26px
+			border-bottom: 1px solid #f1f1f1
+		li 
+			font-size: 15px
+			line-height: 1
+			color: #53484e
+			margin-bottom: 30px
+			display: block
+			cursor: pointer
+			&:last-child
+				margin-bottom: 10px
+			&:hover
+				color: #b4337f
+			&.active
+				color: #b4337f
+	.faq-r
+		float: right
+		width: 890/1180*100%
+		border-left: 1px solid #f1f1f1
+		+box-sizing(border-box)
+		min-height: 400px
+		+breakpoint(767px)
+			display: block
+			float: none
+			width: 100%
+		h4
+			float: left
+			margin-bottom: 0
+			+breakpoint(550px)
+				float: none
+				display: block
+				width: 100%
+			&:before
+				+font-icon("arrow")
+				font-size: 8px
+				color: #979595
+				display: inline-block
+				vertical-align: middle
+				margin-right: 15px
+				margin-bottom: 3px
+	h5
+		color: #1d1e20
+		display: block
+		margin-top: 40px
+		font-size: 22px
+		line-height: 1
+		letter-spacing: 0.06em
+		padding-left: 30px
+		margin-bottom: 25px
+		// border-bottom: 1px solid #f1f1f1
+	.faq-r-t
+		+pie-clearfix
+		+box-sizing(border-box)
+		padding: 50px 30px 0px
+		+breakpoint(767px)
+			padding-top: 30px
+	.faq-r-item
+		display: block
+		border-bottom: 1px solid #f1f1f1
+		margin-bottom: -1px
+		border-top: 1px solid #f1f1f1
+		// &:nth-of-type(1)
+		&.open
+			.title
+				color: #b4337f
+				&:before
+					transform: rotate(270deg)
+					color: #b4337f
+			.faq-r-item-sub
+				padding: 36px 30px
+				+opacity(1)
+				max-height: 2000px
+		.title
+			padding: 27px 55px 25px 30px
+			font-size: 16px
+			display: block
+			position: relative
+			line-height: 1
+			color: #545960
+			cursor: pointer
+			&:before
+				+font-icon("arrow")
+				font-size: 12px
+				line-height: 0
+				color: #979595
+				// display: inline-block
+				// vertical-align: middle
+				+transition(0.3s)
+				position: absolute
+				right: 30px
+				+breakpoint(767px)
+					right: 20px
+				top: 50%
+				transform: translateY(-50%) rotate(90deg)
+				// margin-right: 15px
+				// margin-bottom: 3px
+	.faq-r-item-sub
+		+opacity(0)
+		max-height: 0
+		border-top: 1px solid #f1f1f1
+		+transition(0.4s)
+		padding: 0px 30px
+		overflow: hidden
+		p 
+			margin-bottom: 25px
+			display: block
+			color: #262225
+			font-size: 14px
+			line-height: 20px
+			&:last-child
+				margin-bottom: 0
+	.search
+		position: relative
+		float: right
+		width: 260px
+		+breakpoint(550px)
+			float: none
+			display: block
+			width: 100%
+			margin-top: 20px
+			// width: 260/890*100%
+		// margin-left: 25px
+	input[type="search"]
+		border: none
+		outline: none
+		border: 1px solid #f2f0f1
+		height: 40px
+		width: 100%
+		padding: 5px 14px 5px
+		padding-right: 30px
+		+box-sizing(border-box)
+		background: #fff
+		font-size: 15px
+		color: #a3acb7
+		letter-spacing: 0.4px
+		line-height: 15px
+		+border-radius(4px)
+		+opacity(1)
+		+transition(0.4s)
+		+box-shadow(0 2px 8px 0px rgba(#4b1a36, 0.02))
+		&:hover
+			background: rgba(#fff, 0.7)
+		&:focus
+			+transition(0.4s)
+			background: rgba(#fff, 0.7)
+			+placeholder
+				+opacity(0)
+		+placeholder
+			+transition(0.4s)
+			font-size: 15px
+			color: #a3acb7
+			letter-spacing: 0.4px
+			line-height: 15px
+			+opacity(0.7)
+	.search-submit
+		position: absolute
+		right: 0
+		top: 0
+		height: 40px
+		width: 30px
+		&:before
+			+font-icon("search")
+			position: absolute
+			color: #a3acb7
+			right: 0
+			top: 10px
+			font-size: 19px
+			left: 0
+			bottom: 0
+			z-index: 1
+			pointer-events: none
+		input[type="submit"]
+			position: relative
+			border: none
+			outline: none
+			background: transparent
+			height: 100%
+			width: 30px
+			cursor: pointer

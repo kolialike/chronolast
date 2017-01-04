@@ -5,6 +5,7 @@
 @import content/watches
 @import content/contact
 @import content/faq
+@import content/eror
 
 .main-slider
 	position: relative
@@ -280,7 +281,7 @@
 			padding: 0 13px
 			&:first-child
 				padding-left: 0
-	.days
+	// .days
 
 // .pages
 // 	margin-top: 40px
@@ -780,6 +781,8 @@
 	+transition(0.45s)
 	background: #fff
 	+box-shadow(0px 1px 5px 0px rgba(95,80,89,0.3))
+	+breakpoint(600px)
+		top: 70px
 	table
 		width: 100%
 	thead
@@ -791,8 +794,11 @@
 	th,td
 		padding: 15px 0px 10px
 		font-size: 14px
+		line-height: 1
 		color: #30242b
 		padding-left: 40px
+		+breakpoint(600px)
+			padding-left: 20px
 	th 
 		color: #545454
 		line-height: 1
@@ -972,16 +978,18 @@
 				left: 0
 				+border-radius(100%)
 				background: #ba5991
-				padding: 18px 16px 10px
+				padding: 17px 16px 10px
 				font-size: 18px
 				line-height: 22px
 				color: #e69cc7
+				// +transition(transform 0.1s margin 0.1s)
 				margin-left: -25px
 				+box-shadow(0px 0px 10px 0px rgba(186,89,145,0.71))
 			&:before
 				+font-icon("favorite")
 				background: #ba5991
 				+border-radius(100%)
+				// +transition(transform 0.1s margin 0.1s)
 				padding: 17px 16px 10px
 				font-size: 18px
 				line-height: 22px
@@ -992,11 +1000,15 @@
 					// background: #fff
 					color: #fff
 					background: #ba5991
+					// +transition(transform 0.4s)
 					// +transition(0.3s)
 				&:hover
 					// margin-top: 138px
 					&:before
+						// +transform(rotate(360deg))
+						// margin-top: 5px
 						+font-icon("cancel")
+						// +transition(transform 0.1s margin 0.1s)
 						color: #fff
 						background: #ba5991
 						// background: #fff
@@ -1749,6 +1761,7 @@
 					&:before
 						background: #fff
 						color: #b14785
+						// +transition(transform 0.4s)
 						// +transition(1s)
 						// transform: scale(1)
 						// +transition(color 1s)
@@ -1760,10 +1773,11 @@
 							// +opacity(0)
 						&:before
 							+font-icon("cancel")
+							// +transform(rotate(360deg)) 
 							+transition(opacity 1s)
 							background: #fff
 							font-size: 14px
-							padding: 17px 18px 14px
+							padding: 17px 18px 15px
 							// padding: 17px 18px 14px
 							// font-size: 14px
 							color: #b14785
@@ -1789,12 +1803,14 @@
 							// background: #fff
 							color: #fff
 							background: #ba5991
+							// +transition(transform 0.4s)
 							// +transition(0.3s)
 						&:hover
 							// margin-top: 138px
 							&:before
 								color: #fff
 								background: #ba5991
+								// +transform(rotate(360deg)) 
 								// background: #fff
 								// padding: 17px 18px 14px
 								// font-size: 14px

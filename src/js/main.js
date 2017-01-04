@@ -96,6 +96,14 @@ jQuery(function($){
     });
     //Табы по индексу
 
+    // function Tabs () {
+    //     tabs.on('click', function(event) {
+    //         event.preventDefault();
+    //         $(this).addClass('active').siblings().removeClass('active');
+    //         var index = tabs.index($(this));
+    //         tabsContent.eq(index).addClass('active').siblings().removeClass('active');
+    //     });
+    // }
 
     //header-menu
     var body = $("body");
@@ -118,6 +126,19 @@ jQuery(function($){
         $(this).parent().parent().toggleClass('bids-open');
     });
     //header-menu
+
+
+    // faq
+    var faq = $(".faq-menu li");
+    faq.on('click', function(event) {
+        event.preventDefault();
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    $(".faq-r-item .title").on('click', function(event) {
+        $(this).parent().toggleClass('open').siblings().removeClass('open');        
+    });
+    // faq
 
 
     //Slider
@@ -261,81 +282,89 @@ jQuery(function($){
         if(!$(thisLala).data('lang')) event.stopPropagation();
     });
 
-    //fixed-header-menu
-    var $menu = $('.header-bottom'); 
+
     var $window = $(window);
-    if($menu.length > 0){
-        var menuTop = $menu.offset().top;
-        $window.on('scroll', function() {
-            var windowTop = $window.scrollTop();
-            if(windowTop >= menuTop){
-                body.addClass("fixed-header");
-            }else{
-                body.removeClass("fixed-header");
-            }
+        //fixed-header-menu
+    $(window).resize(function() {
+        var $menu = $('.header-bottom'); 
+        if($menu.length > 0){
+            var menuTop = $menu.offset().top;
+            $window.on('scroll', function() {
+                var windowTop = $window.scrollTop();
+                if(windowTop >= menuTop){
+                    body.addClass("fixed-header");
+                }else{
+                    body.removeClass("fixed-header");
+                }
+            });
+        }
+        //fixed-header-menu
+
+            // console.log($menu.offset());
+
+        // fixed-catalog-menu
+        var $filter = $('.filter');
+        if($filter.length > 0){
+                 
+                var menuTopNew = $filter.offset().top-52;
+                $window.on('scroll', function() {
+                    var windowTop = $window.scrollTop();
+                    if(windowTop >= menuTopNew){
+                        body.addClass("fixed-filter");
+
+                    }else{
+                        body.removeClass("fixed-filter");
+                    }
+                });
+            
+        }
+        //fixed-catalog-menu
+
+
+        $(".add-to-wishlist").on('click', function(event) {
+            $(this).toggleClass('active');
         });
-    }
-    //fixed-header-menu
 
-        // console.log($menu.offset());
-
-    // fixed-catalog-menu
-    var $filter = $('.filter');
-    if($filter.length > 0){
-             
-            var menuTopNew = $filter.offset().top-52;
-            $window.on('scroll', function() {
-                var windowTop = $window.scrollTop();
-                if(windowTop >= menuTopNew){
-                    body.addClass("fixed-filter");
-
-                }else{
-                    body.removeClass("fixed-filter");
-                }
-            });
-        
-    }
-    //fixed-catalog-menu
-
-    // fixed-content-menu
-     if(length > 0){
-        var contentMenu = $('.content-menu'); 
-             
-            var menuTopNew3 = contentMenu.offset().top-52;
-            $window.on('scroll', function() {
-                var windowTop = $window.scrollTop();
-                if(windowTop >= menuTopNew3){
-                    body.addClass("fixed-content-menu");
-                    // $menu.css('box-shadow', '0,0,0,0,0');
-                }else{
-                    body.removeClass("fixed-content-menu");
-                }
-            });
-        
-    }
-    //fixed-content-menu
+        // fixed-content-menu
+            var contentMenu = $('.content-menu'); 
+         if(contentMenu.length > 0){
+                 
+                var menuTopNew3 = contentMenu.offset().top-52;
+                $window.on('scroll', function() {
+                    var windowTop = $window.scrollTop();
+                    if(windowTop >= menuTopNew3){
+                        body.addClass("fixed-content-menu");
+                        // $menu.css('box-shadow', '0,0,0,0,0');
+                    }else{
+                        body.removeClass("fixed-content-menu");
+                    }
+                });
+            
+        }
+        //fixed-content-menu
 
 
-    // fixed-po-menu
+        // fixed-po-menu
 
-    var poInfoBottom = $('.po-info-bottom-fix'); 
-     if(poInfoBottom.length > 0){
-             
-            var menuTopNew2 = poInfoBottom.offset().top-52;
-            $window.on('scroll', function() {
-                var windowTop = $window.scrollTop();
-                if(windowTop >= menuTopNew2){
-                    body.addClass("fixed-po-menu");
-                    // $menu.css('box-shadow', '0,0,0,0,0');
-                }else{
-                    body.removeClass("fixed-po-menu");
-                }
-            });
-        
-     };
-    //fixed-po-menu
-
+        var poInfoBottom = $('.po-info-bottom-fix'); 
+         if(poInfoBottom.length > 0){
+                 
+                var menuTopNew2 = poInfoBottom.offset().top-52;
+                $window.on('scroll', function() {
+                    var windowTop = $window.scrollTop();
+                    if(windowTop >= menuTopNew2){
+                        body.addClass("fixed-po-menu");
+                        // $menu.css('box-shadow', '0,0,0,0,0');
+                    }else{
+                        body.removeClass("fixed-po-menu");
+                    }
+                });
+            
+         };
+        //fixed-po-menu
     //fixed-watches-r
+    });
+    // var $window = $(window);
     var watches = $('.watches-r'); 
      if(watches.length > 0){
         $(window).resize(function() {

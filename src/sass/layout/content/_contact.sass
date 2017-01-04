@@ -9,6 +9,7 @@
 		margin-bottom: 90px
 		+breakpoint(767px)
 			margin-top: 0
+			margin-bottom: 50px
 	.contact-l
 		float: left
 		width: 740/1180*100%
@@ -24,6 +25,8 @@
 			display: block
 			width: 100%
 			padding: 30px 20px 25px
+			margin-top: 45px
+			margin-bottom: 40px
 	h3
 		display: block
 		font-size: 30px
@@ -35,14 +38,17 @@
 	.contact-r
 		float: right
 		width: 440/1180*100%
-		background: #322633
-		padding: 45px 20px 27px 60px
+		padding: 45px 20px 72px 60px
+		// background-color: #322633
+		background-image: url("../img/contact-bg.png")
+		background-repeat: no-repeat
+		background-size: cover
 		+box-sizing(border-box)
 		position: relative
 		+breakpoint(1023px)
-			padding: 45px 20px 33px 35px
+			padding: 45px 20px 78px 35px
 		+breakpoint(767px)
-			padding: 30px 20px 25px
+			padding: 30px 20px 30px
 			float: none
 			display: block
 			width: 100%
@@ -50,6 +56,8 @@
 			color: #fff
 			font-size: 26px
 			margin-bottom: 60px
+			+breakpoint(767px)
+				margin-bottom: 15px
 	.contact-r-item
 		display: block
 		margin: 0 -20px 0px -60px
@@ -169,3 +177,28 @@
 		&:focus
 			+placeholder 
 				+opacity(0)
+	input[type="submit"]
+		color: #fff
+		font-size: 16px
+		display: block
+		width: 200px
+		text-align: center
+		line-height: 1
+		text-transform: uppercase
+		background: #b4337f
+		border: none
+		padding: 16px 10px 13px
+		+box-sizing(border-box)
+		+border-radius(4px)
+		letter-spacing: 0.06em
+		margin: 25px auto 0
+		&:hover
+			background: #bf428c
+		+breakpoint(1023px)
+			float: none
+			display: block
+			margin: 0px auto 0px
+		+breakpoint(767px)
+			display: block
+			
+			width: 100%
