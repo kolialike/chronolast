@@ -282,22 +282,32 @@ jQuery(function($){
         if(!$(thisLala).data('lang')) event.stopPropagation();
     });
 
-
-    var $window = $(window);
-        //fixed-header-menu
-    $(window).resize(function() {
+    function headerFixed() {
         var $menu = $('.header-bottom'); 
         if($menu.length > 0){
             var menuTop = $menu.offset().top;
-            $window.on('scroll', function() {
-                var windowTop = $window.scrollTop();
-                if(windowTop >= menuTop){
-                    body.addClass("fixed-header");
-                }else{
-                    body.removeClass("fixed-header");
-                }
-            });
+            var windowTop = $window.scrollTop();
+            if(windowTop >= menuTop){
+                body.addClass("fixed-header");
+            }else{
+                body.removeClass("fixed-header");
+            }
         }
+    }
+
+    var $window = $(window);
+        //fixed-header-menu
+    $(document).ready(function() {
+        headerFixed();
+        // console.log(222);
+    });
+    $(window).on('scroll', function() {
+        // console.log(111);
+        headerFixed();
+    });
+
+    $(window).resize(function() {
+        headerFixed();
         //fixed-header-menu
 
             // console.log($menu.offset());
